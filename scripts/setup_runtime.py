@@ -18,7 +18,7 @@ def main():
     if not (runtime / "bin/python").exists():
         subprocess.run([uv, "venv", "--python", "3.12", str(runtime)], check=True, cwd=root)
     subprocess.run([uv, "pip", "install", "--python", str(runtime / "bin/python"), "--torch-backend", options.torch_backend, str(root)], check=True, cwd=root)
-    subprocess.run([str(runtime / "bin/python"), "-m", "hermes_yolo_vision.cli", "info"], check=True)
+    subprocess.run([str(runtime / "bin/python"), "-I", "-m", "hermes_yolo_vision.cli", "info"], check=True)
 
 
 if __name__ == "__main__":
