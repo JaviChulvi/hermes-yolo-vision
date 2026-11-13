@@ -9,6 +9,7 @@ import threading
 import time
 import zipfile
 from collections import Counter
+from fractions import Fraction
 from pathlib import Path
 
 from .jobs import read_json, write_json
@@ -215,6 +216,8 @@ def run(record, directory):
                     with av.open(str(source)) as container:
                         video = container.streams.video[0]
                         rate = video.average_rate
+                        pixel_aspect = video.sample_aspect_ratio or Fraction(1)
+                        metadata["source_sample_aspect_ratio"] = str(pixel_aspect)
                         if not rate or not video.time_base:
                             raise ValueError("Video has no usable frame rate/time base")
                         first_time = None
@@ -259,6 +262,9 @@ def run(record, directory):
                                     encoded.pix_fmt = "yuv420p"
                                     encoded.time_base = video.time_base
                                     encoded.codec_context.time_base = video.time_base
+                                    encoded.codec_context.sample_aspect_ratio = (
+                                        1 / pixel_aspect if rotation % 180 else pixel_aspect
+                                    )
                                 image = np.pad(image, ((0, height % 2), (0, width % 2), (0, 0)))
                                 rendered = av.VideoFrame.from_ndarray(image, format="bgr24")
                                 rendered.pts = frame.pts - first_pts

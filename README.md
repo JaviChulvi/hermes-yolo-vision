@@ -23,6 +23,7 @@ All seven tasks accept local images and videos. Tracking adds ByteTrack IDs to d
 Accepted extensions: `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif`, and `.tiff` for images; `.mp4`, `.mov`, `.mkv`, `.avi`, `.webm`, and `.m4v` for videos.
 
 Video display rotations in multiples of 90 degrees are applied before analysis. Mirrored display metadata is rejected; export an upright video first.
+Annotated videos retain pixel aspect ratio; coordinates use decoded pixels after rotation.
 
 Examples of requests:
 
