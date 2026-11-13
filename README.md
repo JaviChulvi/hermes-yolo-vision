@@ -20,6 +20,8 @@ Give your Hermes agent eyes with Ultralytics YOLO.
 
 All seven tasks accept local images and videos. Tracking adds ByteTrack IDs to detection, segmentation, pose, or oriented boxes. YOLOE supports text-prompted detection/segmentation with `yoloe-26s-seg.pt`. Trusted local `.pt` weights can replace defaults.
 
+Accepted extensions: `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif`, and `.tiff` for images; `.mp4`, `.mov`, `.mkv`, `.avi`, `.webm`, and `.m4v` for videos.
+
 Video display rotations in multiples of 90 degrees are applied before analysis. Mirrored display metadata is rejected; export an upright video first.
 
 Examples of requests:
