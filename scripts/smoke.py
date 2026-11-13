@@ -15,7 +15,7 @@ from ultralytics.utils import ASSETS
 
 from hermes_yolo_vision.jobs import Jobs, write_json
 from hermes_yolo_vision.requests import validate
-from hermes_yolo_vision.schemas import DEFAULT_MODELS
+from hermes_yolo_vision.schemas import DEFAULT_MODELS, TRACK_TASKS
 
 
 def static_clip(image, destination):
@@ -42,6 +42,10 @@ def check_result(result, task, expected_frames, raw=False):
         assert path.is_file() and path.stat().st_size > 0, path
     rows = [json.loads(line) for line in artifacts["observations"].read_text().splitlines()]
     assert len(rows) == expected_frames
+    if result["distinct_track_ids"] is not None:
+        ids = [[obj["track_id"] for obj in row["observations"]] for row in rows]
+        assert all(len(frame_ids) == len(set(frame_ids)) for frame_ids in ids)
+        assert set.intersection(*(set(frame_ids) for frame_ids in ids)), "No ID persists through the clip"
     first = rows[0]
     if task == "depth":
         assert first["depth"]["valid_pixel_ratio"] > 0.9 and first["depth"]["median"] > 0
@@ -93,7 +97,7 @@ def main():
     if opts.text:
         cases.append(("segment", "yolo_predict", {"text_prompts": ["person", "bus"]}))
     if opts.tracking:
-        cases.append(("pose", "yolo_track", {}))
+        cases.extend((task, "yolo_track", {}) for task in opts.tasks if task in TRACK_TASKS)
     try:
         for task, operation, extra in cases:
             source = obb[0] if task == "obb" else ASSETS / "bus.jpg"
