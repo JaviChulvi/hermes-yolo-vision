@@ -107,7 +107,7 @@ def worker(options):
             assert registry.get_entry("yolo_predict"), "Native plugin was not registered"
         from model_tools import handle_function_call
 
-        probe_code = "import sys,ultralytics,av,clip,lap,json; print(json.dumps({'python':sys.executable,'ultralytics':ultralytics.__version__,'av':av.__version__}))"
+        probe_code = "import sys,ultralytics,av,clip,lap,shapely,json; print(json.dumps({'python':sys.executable,'ultralytics':ultralytics.__version__,'av':av.__version__,'shapely':shapely.__version__}))"
         probe = handle_function_call(
             "terminal",
             {
@@ -227,7 +227,7 @@ def main():
             str(opts.runtime),
             "-I",
             "-c",
-            "import importlib.metadata,json,sys; print(json.dumps({'python':sys.version, 'packages':{n:importlib.metadata.version(n) for n in ['ultralytics','torch','torchvision','av','lap','clip','numpy','pillow']}}))",
+            "import importlib.metadata,json,sys; print(json.dumps({'python':sys.version, 'packages':{n:importlib.metadata.version(n) for n in ['ultralytics','torch','torchvision','av','lap','clip','numpy','pillow','shapely']}}))",
         ],
         text=True,
     )

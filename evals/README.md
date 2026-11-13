@@ -46,9 +46,10 @@ No finite benchmark tests every possible use case. Publish measured coverage and
 
 ## Run on an existing Hermes host
 
-Prepare media with the inference Python, then run the harness with the Python used by the existing Hermes installation. Keep credentials on that host; `--auth-home` references its existing provider login. The runner creates isolated homes and an opaque run mapping. It freezes code/skill hashes, weights, runtime versions, model, reasoning setting, fixture hash and Hermes revision in `study.json`; a changed identity requires a new output directory.
+Install the `eval` extra into the shared inference runtime, prepare media with that Python, then run the harness with the Python used by the existing Hermes installation. The extra includes Shapely, required to initialize upstream workout/counting Solutions recommended by the strong baseline; all arms get it. Keep credentials on that host; `--auth-home` references its existing provider login. The runner creates isolated homes and an opaque run mapping. It freezes code/skill hashes, weights, runtime versions, model, reasoning setting, fixture hash and Hermes revision in `study.json`; a changed identity requires a new output directory.
 
 ```bash
+uv pip install --python /path/to/vision/.venv/bin/python --torch-backend cpu '/path/to/hermes-yolo-vision[eval]'
 /path/to/vision/.venv/bin/python evals/prepare.py /tmp/yolo-fixtures
 /path/to/hermes/python evals/run.py \
   --hermes /path/to/hermes-agent \
