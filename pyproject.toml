@@ -18,6 +18,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.14", "jsonschema>=4", "build>=1"]
+eval = ["pycocotools==2.0.11"]
 
 [project.scripts]
 hermes-yolo-vision = "hermes_yolo_vision.cli:main"

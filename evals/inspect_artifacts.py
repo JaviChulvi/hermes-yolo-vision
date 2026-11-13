@@ -160,6 +160,7 @@ def audit_run(root, options):
         "followup": request["case"].get("followup"),
         "rubric": request["case"].get("rubric"),
         "execution_status": run["status"],
+        "budget_exceeded": run["elapsed_seconds"] > 300 or len(run.get("tool_calls", [])) > 20,
         "completed_turns": [t.get("completed", False) for t in turns],
         "final_answers": [],
         "artifacts": [],

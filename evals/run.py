@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import shlex
+import shutil
 import signal
 import subprocess
 import sys
@@ -51,7 +52,7 @@ def worker(options):
 
     def on_tool(tool_id, name, args):
         calls.append({"name": name, "arguments": args, "elapsed_seconds": time.monotonic() - start})
-        write(options.run / "progress.json", {"calls": len(calls), "last_tool": name})
+        write(options.run / "progress.json", {"calls": len(calls), "last_tool": name, "tool_calls": calls, "start_monotonic": start})
         if len(calls) > 20 and agent is not None:
             agent.interrupt("Evaluation tool call budget reached")
 
@@ -124,7 +125,7 @@ def worker(options):
         prompt = spec["case"]["prompt"]
         if spec["attachment"]:
             prompt += "\n\n[Attachment downloaded by the host: " + spec["attachment"] + "]"
-            if Path(spec["attachment"]).suffix.lower() in (".jpg", ".jpeg", ".png"):
+            if spec["case"].get("attachment_mode") != "file" and Path(spec["attachment"]).suffix.lower() in (".jpg", ".jpeg", ".png"):
                 from agent.image_routing import build_native_content_parts, decide_image_input_mode
                 from hermes_cli.config import load_config
 
@@ -282,6 +283,8 @@ def main():
                 if (run / "result.json").exists():
                     print(json.dumps({"skipped_existing": run.name}), flush=True)
                     continue
+                if shutil.disk_usage(opts.output).free < 1024**3:
+                    raise SystemExit("Less than 1 GiB free: evaluation stopped, coverage incomplete; preserve evidence before freeing space")
                 home, work = run / "home", run / "work"
                 home.mkdir(parents=True, exist_ok=True, mode=0o700)
                 work.mkdir(exist_ok=True)
@@ -365,12 +368,16 @@ def main():
                             process.kill()
                             process.wait()
                 if not (run / "result.json").exists():
+                    progress_path = run / "progress.json"
+                    progress = json.loads(progress_path.read_text()) if progress_path.exists() else {}
                     write(
                         run / "result.json",
                         {
                             "status": "failed",
                             "error": "Child exited or exceeded 330s outer deadline",
-                            "elapsed_seconds": time.monotonic() - start,
+                            "elapsed_seconds": time.monotonic() - progress.get("start_monotonic", start),
+                            "tool_calls": progress.get("tool_calls", []),
+                            "observed_tool_calls": progress.get("calls", 0),
                             "arm": arm,
                             "case_id": case["id"],
                             "repeat": repeat,

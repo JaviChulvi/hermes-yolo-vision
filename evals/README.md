@@ -10,6 +10,8 @@ The comparison uses the same Hermes version, existing model account, reasoning s
 
 Use fresh homes and conversations, interleave arm order, and keep native vision available to all arms. Share warmed model caches fairly; measure installation and first-use downloads separately. Do not let the baseline read the plugin source, skill, job records, or answers. Provider access stays on the authorized host. No new paid services.
 
+Valid photos use Hermes's normal native image attachment path. Corrupt JPEG bytes are attached as a file/document, so the agent can inspect the downloaded file: submitting those bytes directly as a provider image fails before any agent or tool can act. Development exposed that transport error; retain those original failed runs and use a separately identified file-attachment recovery test.
+
 ## Cases and scoring
 
 Eight development conversations exercise setup, image detection, video pose, a segmentation export, tracking, text prompts, a follow-up, and recovery. The held-out suite has 24 conversations: two per vision task (14), two tracking, two YOLOE, two follow-ups, and four negative/recovery cases. Repeat each case three times per arm: 216 held-out runs, with at most 20 tool calls and five minutes per conversation.
@@ -63,3 +65,5 @@ Development defaults to one repetition. After its checks and version freeze, use
 The [frozen rubric](RUBRIC.md), [case definitions](cases.py), [fixture provenance](fixtures.json), and [COCO/DOTA annotation subset](annotations.json) define correctness. Results initially remain **ungraded**. Review each case against the rubric with arm labels hidden, record evidence, and only then aggregate. Raw run directories include authenticated-profile links and local traces: do not publish them wholesale.
 
 Use `python evals/inspect_artifacts.py /path/to/study --output /path/to/review --copy-artifacts` with the inference runtime to check saved files and prepare neutral artifact names for review. For evidence copied from another host, add `--source-root /original/study/path`. The inspector reports decoding, dimensions, timestamps and array validity; it leaves grades pending. Apply ground-truth overlap and answer checks separately. Arm labels and paths are hidden in the audit JSON, but artifact formats or embedded metadata may still suggest an implementation; this is not guaranteed reviewer blinding.
+
+[metrics.py](metrics.py) provides box/mask/polygon IoU, one-to-one matching and visible-joint PCK for independent checks. Install the `eval` extra for COCO mask decoding. Normalize each artifact using its documented coordinate/resize conventions and record that normalization with the measured values; these functions do not infer an artifact schema or assign conversation grades.
