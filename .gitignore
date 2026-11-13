@@ -1,0 +1,13 @@
+.venv/
+.agent/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+artifacts/
+*.pt
+*.onnx
+*.ts
