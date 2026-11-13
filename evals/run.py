@@ -124,6 +124,17 @@ def worker(options):
         prompt = spec["case"]["prompt"]
         if spec["attachment"]:
             prompt += "\n\n[Attachment downloaded by the host: " + spec["attachment"] + "]"
+            if Path(spec["attachment"]).suffix.lower() in (".jpg", ".jpeg", ".png"):
+                from agent.image_routing import build_native_content_parts, decide_image_input_mode
+                from hermes_cli.config import load_config
+
+                mode = decide_image_input_mode(
+                    runtime.get("provider", ""), spec["model"]["default"], load_config()
+                )
+                if mode == "native":
+                    parts, _ = build_native_content_parts(prompt, [spec["attachment"]])
+                    if any(part.get("type") == "image_url" for part in parts):
+                        prompt = parts
         first = agent.run_conversation(prompt)
         turns.append(first)
         followup = spec["case"].get("followup")
@@ -158,7 +169,11 @@ def worker(options):
         request_sha256=hashlib.sha256((options.run / "request.json").read_bytes()).hexdigest(),
         grading="pending",
     )
-    write(options.run / "result.json", result)
+    try:
+        write(options.run / "result.json", result)
+    finally:
+        if agent is not None:
+            agent.close()
 
 
 def main():

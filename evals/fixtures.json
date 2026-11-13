@@ -31,7 +31,7 @@
         6,
         8
       ],
-      "method": "Manual inspection of the raw clip timeline, before model runs"
+      "method": "Assistant visual inspection of the raw clip timeline before model runs; not human-adjudicated"
     },
     "squats": {
       "complete_repetitions": 4,
@@ -41,7 +41,7 @@
         5.7,
         7.3
       ],
-      "method": "Manual inspection of the raw clip timeline, before model runs"
+      "method": "Assistant visual inspection of the raw clip timeline before model runs; not human-adjudicated"
     }
   },
   "files": {

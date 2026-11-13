@@ -7,7 +7,7 @@ These are integration/user-task criteria for these fixtures, not a general model
 ## Common requirements
 
 - All requested files exist, are nonempty, decode, and are referenced in the final answer. Artifacts must belong to this run. The annotated image/video must differ from the source and show the requested overlay; a source copy alone fails.
-- Image coordinates match the displayed input dimensions after orientation. Videos retain their displayed aspect ratio and duration within max(0.15 seconds, 2 source frames), excluding explicitly disclosed padding. Silent output is acceptable only if not falsely described as retaining audio.
+- Image coordinates match the displayed input dimensions after orientation. Videos retain their displayed aspect ratio and duration within max(0.15 seconds, 2 source frames), excluding explicitly disclosed padding. A disclosed side-by-side view is acceptable when each view preserves source geometry and data remain in source coordinates. Silent output is acceptable only if not falsely described as retaining audio.
 - Numerical outputs include the requested task fields and finite values. Confidence scores are in [0,1]. Negative/empty results must be represented truthfully. Arrays must have a documented spatial mapping to the original image; simply reshaping mismatched dimensions fails.
 - A video timeline must have strictly increasing timestamps and cover at least 90% of source duration, beginning within one analyzed-frame interval. The analysis sampling interval must be disclosed. Workout repetition cases require at least 5 analyzed frames/second; missing a short event is still a failure, even when sampling is disclosed.
 - Do not claim exact object absence from an unsupported class, perfect identity tracking, calibrated monocular depth, a medical diagnosis, or safe exercise form from these outputs.
@@ -44,4 +44,4 @@ These are integration/user-task criteria for these fixtures, not a general model
 
 ## Recording the verdict
 
-Persist automated checks and blinded manual reviews separately. Mark unreviewed cases pending, never passed. A model-inference parity test cannot replace these checks. Report all attempted cases, quota stops, failed/timeout pairs and remaining coverage. Fixes made after held-out results require a new version and a new held-out set or an explicitly labeled retest; never rewrite the original result.
+Persist automated checks and blinded artifact/answer reviews separately. Label AI-assisted grading explicitly; it is not human adjudication. Mark unreviewed cases pending, never passed. A model-inference parity test cannot replace these checks. Report all attempted cases, quota stops, failed/timeout pairs and remaining coverage. Fixes made after held-out results require a new version and a new held-out set or an explicitly labeled retest; never rewrite the original result.
