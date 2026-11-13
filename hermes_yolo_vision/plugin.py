@@ -16,7 +16,7 @@ def readiness(python=None):
     if python and str(python) != sys.executable:
         try:
             probe = subprocess.run(
-                [str(python), "-c", "import sys; sys.path.insert(0, sys.argv[1]); from hermes_yolo_vision.plugin import readiness; import json; print(json.dumps(readiness()))", str(Path(__file__).resolve().parent.parent)],
+                [str(python), "-I", "-c", "import sys; sys.path.insert(0, sys.argv[1]); from hermes_yolo_vision.plugin import readiness; import json; print(json.dumps(readiness()))", str(Path(__file__).resolve().parent.parent)],
                 capture_output=True, text=True, timeout=10,
             )
             return json.loads(probe.stdout)

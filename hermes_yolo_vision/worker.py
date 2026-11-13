@@ -79,7 +79,7 @@ def run(record, directory):
     output = Path(record["output"])
     progress = directory / "progress.json"
     write_json(progress, {"phase": "preparing_model", "model": args["model"]})
-    model = (YOLOE if "yoloe-" in Path(args["model"]).name else YOLO)(args["model"])
+    model = YOLO(args["model"])
     task = model.task
     requested = args.get("task")
     if args.get("text_prompts"):
@@ -229,9 +229,20 @@ def run(record, directory):
                                 metadata["source_start_seconds"] = first_time
                             timestamp = float(frame.time - first_time)
                             image = frame.to_ndarray(format="bgr24")
+                            display = frame.side_data.get("DISPLAYMATRIX")
+                            if display is not None:
+                                matrix = np.frombuffer(display, dtype=np.int32).reshape(3, 3)
+                                if int(matrix[0, 0]) * int(matrix[1, 1]) < int(matrix[0, 1]) * int(
+                                    matrix[1, 0]
+                                ):
+                                    raise ValueError(
+                                        "Mirrored video display metadata is unsupported; export an upright video before analysis"
+                                    )
                             rotation = frame.rotation
                             if rotation % 90:
-                                raise ValueError("Video display rotation must be a multiple of 90 degrees")
+                                raise ValueError(
+                                    "Video display rotation must be a multiple of 90 degrees"
+                                )
                             if rotation:
                                 image = np.rot90(image, k=round(rotation / 90)).copy()
                             height, width = image.shape[:2]
@@ -248,9 +259,7 @@ def run(record, directory):
                                     encoded.pix_fmt = "yuv420p"
                                     encoded.time_base = video.time_base
                                     encoded.codec_context.time_base = video.time_base
-                                image = np.pad(
-                                    image, ((0, height % 2), (0, width % 2), (0, 0))
-                                )
+                                image = np.pad(image, ((0, height % 2), (0, width % 2), (0, 0)))
                                 rendered = av.VideoFrame.from_ndarray(image, format="bgr24")
                                 rendered.pts = frame.pts - first_pts
                                 rendered.time_base = frame.time_base

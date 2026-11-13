@@ -3,8 +3,19 @@ import sys
 import time
 import types
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 
-from hermes_yolo_vision.plugin import register
+from hermes_yolo_vision.plugin import readiness, register
+
+
+def test_readiness_ignores_parent_pythonpath(tmp_path, monkeypatch):
+    metadata = tmp_path / "av-0.0.0.dist-info"
+    metadata.mkdir()
+    (metadata / "METADATA").write_text("Metadata-Version: 2.1\nName: av\nVersion: 0.0.0\n")
+    expected = readiness()["packages"]
+    monkeypatch.setenv("PYTHONPATH", str(tmp_path))
+    python = Path(sys.executable).parent / ".." / "bin" / Path(sys.executable).name
+    assert readiness(str(python))["packages"] == expected
 
 
 class Context:

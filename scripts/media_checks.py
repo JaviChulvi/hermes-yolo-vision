@@ -76,10 +76,33 @@ def main():
         print(
             json.dumps({"check": "rotated-variable-rate-sampled-video", "passed": True}), flush=True
         )
+        for rotation, hflip, vflip in [(0, True, False), (90, False, True)]:
+            mirrored = fixtures / f"mirrored-{rotation}.mp4"
+            with av.open(str(clip)) as source, av.open(str(mirrored), "w") as out:
+                stream = out.add_stream_from_template(source.streams.video[0])
+                stream.set_display_rotation(rotation, hflip=hflip, vflip=vflip)
+                for packet in source.demux(video=0):
+                    if packet.dts is not None:
+                        packet.stream = stream
+                        out.mux(packet)
+            result = run({"source": str(mirrored)})
+            assert result["status"] == "failed" and "Mirrored video" in result["error"], result
+        print(json.dumps({"check": "mirrored-video-rejected", "passed": True}), flush=True)
         result = run({"source": str(exif_path), "model": str(custom)})
         assert result["status"] == "completed" and result["task"] == "detect", result
         assert result["preview"]["shape"] == [image.width, image.height]
         print(json.dumps({"check": "exif-and-custom-checkpoint", "passed": True}), flush=True)
+        custom_yoloe = fixtures / "custom-vocabulary.pt"
+        shutil.copy2(model_dir / "yoloe-26s-seg.pt", custom_yoloe)
+        result = run(
+            {
+                "source": str(ASSETS / "bus.jpg"),
+                "model": str(custom_yoloe),
+                "text_prompts": ["bus", "person"],
+            }
+        )
+        assert result["status"] == "completed" and result["preview"]["observations"], result
+        print(json.dumps({"check": "renamed-custom-yoloe-checkpoint", "passed": True}), flush=True)
         result = run({"source": str(corrupt)})
         assert result["status"] == "failed" and "UnidentifiedImageError" in result["error"], result
         print(json.dumps({"check": "corrupt-image", "passed": True}), flush=True)

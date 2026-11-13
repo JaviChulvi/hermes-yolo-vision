@@ -18,7 +18,9 @@ Give your Hermes agent eyes with Ultralytics YOLO.
 | Pose estimation | Person boxes and joint coordinates | `yolo26n-pose.pt` |
 | Oriented boxes | Rotated object corners | `yolo26n-obb.pt` |
 
-All seven tasks accept local images and videos. Tracking adds ByteTrack IDs to detection, segmentation, pose, or oriented boxes. YOLOE supports text-prompted detection/segmentation with `yoloe-26s-seg.pt`. Trusted local `.pt` weights can replace defaults; custom YOLOE checkpoints must retain a `yoloe-` filename.
+All seven tasks accept local images and videos. Tracking adds ByteTrack IDs to detection, segmentation, pose, or oriented boxes. YOLOE supports text-prompted detection/segmentation with `yoloe-26s-seg.pt`. Trusted local `.pt` weights can replace defaults.
+
+Video display rotations in multiples of 90 degrees are applied before analysis. Mirrored display metadata is rejected; export an upright video first.
 
 Examples of requests:
 
