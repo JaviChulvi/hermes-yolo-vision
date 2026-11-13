@@ -87,7 +87,7 @@ def register(ctx):
                     response_ready.wait()
                     return (
                         ctx.inject_message(
-                            f"YOLO job {job_id} finished. Call yolo_job to retrieve its actual result and deliver requested artifacts. This notification alone does not indicate success.",
+                            f"YOLO job {job_id} finished. First check this conversation: if this job's requested result and artifacts have already been provided, do not send them again. Otherwise call yolo_job to retrieve the actual result and fulfill only the outstanding request. This notification alone does not indicate success or delivery.",
                             session_key=route,
                         )
                         if route and background and not (jobs.records / job_id / "suppress_notification").exists()
