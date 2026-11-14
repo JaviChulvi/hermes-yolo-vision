@@ -1,0 +1,551 @@
+{
+  "candidate": "06ff6b4",
+  "scope": "Separate 06ff6b4 correction retest: 15 attempts across five previously seen fixture cases (three each). Known plugin arm; AI-assisted independent artifact review, not blinded or human adjudication. Neither a new heldout set nor evidence to rewrite original grades or pool with original 216-run performance. No generalization/significance or channel-transport claim.",
+  "method": "Applied unchanged frozen rubric. Independently recomputed numerical checks; inspected all 7 unique preview hashes, including each of the 3 distinct connecting-skeleton images; verified repeated images by hashes. Read all final answers and supplied exact reference checks. Classifier/no-rerun execution provenance uses sanitized root-verified actual traces. No raw heldout arm/timing mappings accessed.",
+  "original_benchmark": "heldout-v1.json",
+  "original_benchmark_gate_unchanged": "fail",
+  "seen_case_retest": {
+    "attempted": 15,
+    "passed": 15,
+    "failed": 0,
+    "case_repeats": 3,
+    "rubric_sha256": "0783a8c5303b936875689941fe1e2ba1a8a707fc981ced040474e6aef511733d",
+    "review_sha256": "d6fbd681e73d47d15b404e7cb5eaf6726266d0d09b6898631efee423199555a7",
+    "runs": [
+      {
+        "review_id": "0985c0c7fe3f49188dcf9ed03c8432c1",
+        "case_id": "segment-person",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "raw_mask_and_coco_match": "pass",
+          "outline_and_coordinates": "pass",
+          "visual_overlay": "pass",
+          "answer_consistency": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "mask_iou": 0.8789323164918971,
+          "outline_points": 502,
+          "outline_mask_iou_diagnostic": 0.9960566812003078,
+          "mask_foreground": 93207
+        },
+        "trace_sha256": "d09602b376fe0acf703dae835951678966eec03e0ad9d9b58764400fc1ba6b2b"
+      },
+      {
+        "review_id": "11341716a9ac4f75be92d6df52f045b5",
+        "case_id": "semantic-field",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "integer_map_mapping_and_labels": "pass",
+          "areas_and_presence": "pass",
+          "visual_preview": "pass",
+          "answer_consistency": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "class_count": 9,
+          "declared_fraction": 1.0,
+          "grass_share": 0.2600157480314961,
+          "max_share_error": 0.0
+        },
+        "trace_sha256": "f6949f0db59fc30e6ec4e7ffe2555b863141e07529e9ddd10899ddf2410e051d"
+      },
+      {
+        "review_id": "1261f8f931dd457e9718d4dcbf1fd8b5",
+        "case_id": "semantic-field",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "integer_map_mapping_and_labels": "pass",
+          "areas_and_presence": "pass",
+          "visual_preview": "pass",
+          "answer_consistency": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "class_count": 9,
+          "declared_fraction": 1.0,
+          "grass_share": 0.2600157480314961,
+          "max_share_error": 0.0
+        },
+        "trace_sha256": "8bc76451ea30fb22fad16ba0c9b5236722f733286828d64e9afc42c7d2cb903f"
+      },
+      {
+        "review_id": "1d2adae1edb24fe1b9f5e35cfbbbbc27",
+        "case_id": "classify-zebra",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "actual_classifier": "pass",
+          "ranked_scores": "pass",
+          "visual_preview": "pass",
+          "answer_and_rank_delivery": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "ranking": [
+            "zebra",
+            "tiger",
+            "tiger_cat",
+            "armadillo",
+            "triceratops"
+          ],
+          "scores": [
+            0.99969,
+            0.00014,
+            0.00011,
+            2e-05,
+            1e-05
+          ],
+          "actual_classifier_invoked": true
+        },
+        "trace_sha256": "8dcc3c09c139e6bebb164e3dd0dc30bba6331f49c7f8848fa59e9b42664136f9"
+      },
+      {
+        "review_id": "5028f124a6754539994cbeeb59e89ac3",
+        "case_id": "classify-zebra",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "actual_classifier": "pass",
+          "ranked_scores": "pass",
+          "visual_preview": "pass",
+          "answer_and_rank_delivery": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "ranking": [
+            "zebra",
+            "tiger",
+            "tiger_cat",
+            "armadillo",
+            "triceratops"
+          ],
+          "scores": [
+            0.99969,
+            0.00014,
+            0.00011,
+            2e-05,
+            1e-05
+          ],
+          "actual_classifier_invoked": true
+        },
+        "trace_sha256": "9191c10d50698735ac3991076b89837e46c90e74c9b186ea91829e6bd0d3ac07"
+      },
+      {
+        "review_id": "51c9968f877841c18b950730fd0e1c5a",
+        "case_id": "followup-filter",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "exact_counts_and_boxes": "pass",
+          "visual_overlay": "pass",
+          "first_answer": "pass",
+          "followup_values": "pass",
+          "no_second_inference": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "ious": {
+            "person": 0.9412244385980245,
+            "umbrella": 0.960655555963239
+          },
+          "second_turn_tool_calls": 0,
+          "original_values_reused": true
+        },
+        "trace_sha256": "0a0f054b54d42ab5e8ee52f25aca06c496dce1555506d0c6e5da18b3b29d0b12"
+      },
+      {
+        "review_id": "733e61308d5345f2bd8b98a8c43fed6e",
+        "case_id": "pose-photo",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "joint_structure_and_coordinates": "pass",
+          "visible_coco_pck": "pass",
+          "connecting_skeleton": "pass",
+          "visibility_and_answer": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "visible_joints": 13,
+          "tolerance_pixels": 83.90355734115211,
+          "fraction_within_tolerance": 1.0,
+          "confidence_range": [
+            0.00052,
+            0.99943
+          ],
+          "csv_coordinates_match": true
+        },
+        "trace_sha256": "eed15697b2a8c3102bc61ce904e9a96fd9fc9e78582ca6d3635f8a173e0f4453"
+      },
+      {
+        "review_id": "86d0358966cf45d886696b4aac3dfa1d",
+        "case_id": "segment-person",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "raw_mask_and_coco_match": "pass",
+          "outline_and_coordinates": "pass",
+          "visual_overlay": "pass",
+          "answer_consistency": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "mask_iou": 0.8789323164918971,
+          "outline_points": 502,
+          "outline_mask_iou_diagnostic": 0.9960566812003078,
+          "mask_foreground": 93207
+        },
+        "trace_sha256": "d439ec669b8e857049be93a58b10bd5b8171bf44fe90e17e31ad499d9a39c12b"
+      },
+      {
+        "review_id": "91456f4e1f5d46b5a99475a11f627fbc",
+        "case_id": "pose-photo",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "joint_structure_and_coordinates": "pass",
+          "visible_coco_pck": "pass",
+          "connecting_skeleton": "pass",
+          "visibility_and_answer": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "visible_joints": 13,
+          "tolerance_pixels": 83.90355734115211,
+          "fraction_within_tolerance": 1.0,
+          "confidence_range": [
+            0.00052,
+            0.99943
+          ],
+          "csv_coordinates_match": true
+        },
+        "trace_sha256": "7cf8f2a15c46246bb93ee0da55626cf84dabd125042c3c9bc2cb3858e02a34a1"
+      },
+      {
+        "review_id": "97e023e9b3534485b87196c7c23d909f",
+        "case_id": "followup-filter",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "exact_counts_and_boxes": "pass",
+          "visual_overlay": "pass",
+          "first_answer": "pass",
+          "followup_values": "pass",
+          "no_second_inference": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "ious": {
+            "person": 0.9412244385980245,
+            "umbrella": 0.960655555963239
+          },
+          "second_turn_tool_calls": 0,
+          "original_values_reused": true
+        },
+        "trace_sha256": "bd0ce21fbc634a85c4bfa8f039ec9984ed209626c20949aced2c0982005cea0b"
+      },
+      {
+        "review_id": "bb78bbbbe88b43159af3ee7d6978d6be",
+        "case_id": "semantic-field",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "integer_map_mapping_and_labels": "pass",
+          "areas_and_presence": "pass",
+          "visual_preview": "pass",
+          "answer_consistency": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "class_count": 9,
+          "declared_fraction": 1.0,
+          "grass_share": 0.2600157480314961,
+          "max_share_error": 0.0
+        },
+        "trace_sha256": "ac39f6375f6a72efed53506ecbc728a3bc1d8396057eeddd7063dee3ff8ecaa8"
+      },
+      {
+        "review_id": "c1891536356a4bc59c91bec2fc6f8548",
+        "case_id": "segment-person",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "raw_mask_and_coco_match": "pass",
+          "outline_and_coordinates": "pass",
+          "visual_overlay": "pass",
+          "answer_consistency": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "mask_iou": 0.8789323164918971,
+          "outline_points": 502,
+          "outline_mask_iou_diagnostic": 0.9960566812003078,
+          "mask_foreground": 93207
+        },
+        "trace_sha256": "2884c5768be35907ee30897c5d378b964e4a48fd508083068aa110d22f45e7fb"
+      },
+      {
+        "review_id": "d0da0d8ac2ec435db5c77d07c40b449f",
+        "case_id": "classify-zebra",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "actual_classifier": "pass",
+          "ranked_scores": "pass",
+          "visual_preview": "pass",
+          "answer_and_rank_delivery": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "ranking": [
+            "zebra",
+            "tiger",
+            "tiger_cat",
+            "armadillo",
+            "triceratops"
+          ],
+          "scores": [
+            0.99969,
+            0.00014,
+            0.00011,
+            2e-05,
+            1e-05
+          ],
+          "actual_classifier_invoked": true
+        },
+        "trace_sha256": "61c9edb0c96451e9f0a73ea74cde8f92b95c260b43a088b3cc1c0303b5705ec1"
+      },
+      {
+        "review_id": "e3f750cb99fe4c1ba7d9466bcf3acd1b",
+        "case_id": "pose-photo",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "joint_structure_and_coordinates": "pass",
+          "visible_coco_pck": "pass",
+          "connecting_skeleton": "pass",
+          "visibility_and_answer": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "visible_joints": 13,
+          "tolerance_pixels": 83.90355734115211,
+          "fraction_within_tolerance": 1.0,
+          "confidence_range": [
+            0.00052,
+            0.99943
+          ],
+          "csv_coordinates_match": true
+        },
+        "trace_sha256": "6afc0ec5891eb3e97379b079b50cab4a927671eb953f99900edca0bc9de53ef9"
+      },
+      {
+        "review_id": "f67a4cfb16b941e89dbeffb0b28ecfab",
+        "case_id": "followup-filter",
+        "grade": "pass",
+        "checks": {
+          "finished_within_budget": "pass",
+          "artifact_integrity": "pass",
+          "exact_counts_and_boxes": "pass",
+          "visual_overlay": "pass",
+          "first_answer": "pass",
+          "followup_values": "pass",
+          "no_second_inference": "pass",
+          "direct_required_artifact_delivery": "pass"
+        },
+        "independent_metrics": {
+          "ious": {
+            "person": 0.9412244385980245,
+            "umbrella": 0.960655555963239
+          },
+          "second_turn_tool_calls": 0,
+          "original_values_reused": true
+        },
+        "trace_sha256": "eaf163cfaecb5cb20a1bd6ca8b7385368cd1e2b7c56298ee9f7d656ace75151d"
+      }
+    ]
+  },
+  "provenance": {
+    "sources": {
+      "evals/README.md": "72d5c90b0329f71a52a5cd7f8b451e744f049f6d5a6b70223b134d43e2b4a822",
+      "evals/RUBRIC.md": "0783a8c5303b936875689941fe1e2ba1a8a707fc981ced040474e6aef511733d",
+      "evals/annotations.json": "d9721f53e18e954c86efee6338e983859f3bf0b65908d6a991faca44259bc385",
+      "evals/baseline-skill/SKILL.md": "d2379b6a9b1eeae528b79e4fe5ff5a39b8b7db6f4a2b7d572fecdc674fb7a84e",
+      "evals/cases.py": "153bd774e30d423d1142a4b89a5c14db39dc964449cc45546a5c6d99f802a141",
+      "evals/fixtures.json": "584da146978d485ab93566452cd97714d0a651ee27ebfdb1bfc8ad90859a15b1",
+      "evals/inspect_artifacts.py": "f95f83a05f5ab4de2b9ae2709e748db686e5260875ef609281d5c911102fd494",
+      "evals/metrics.py": "946969f73a120a8256eb54b7d9e81ce9e5d9adff3e316ae66b35b4d34bdb3697",
+      "evals/prepare.py": "299690229ce1eb5d7322e38694c8c7ad743e2a7a470b66ee3b37ef7ea3c4151f",
+      "evals/run.py": "3caa772963752696236ab4c7232b96bb2d49fc71ecb926ad8d812a6f7e74a719",
+      "hermes_yolo_vision/__init__.py": "75ca9568aa6705f6c4a44a302001f1ad1391dec698ce592c852ed0ad777a5d4e",
+      "hermes_yolo_vision/cli.py": "425e9041cbb9da7caa0ff9ac155e1092a14c38dd2b6fc2bc1b6c1a3823fc1ed6",
+      "hermes_yolo_vision/jobs.py": "aa06560cdf4aca67afdce5a76cb31572d5abac105a470c08d683b4a82698c09a",
+      "hermes_yolo_vision/plugin.py": "1ba2362e30d62e9f3ead754b401b9745360a2f500c999d99cc02447c63da2a71",
+      "hermes_yolo_vision/requests.py": "b685a77a35b0ff0ec754dd19ab9ce6606c3cca1ee2536f03cefbe19cb4d431c4",
+      "hermes_yolo_vision/schemas.py": "6edf50f0241368bcd1e19e87aae16a0b77cc9548fb8a1f2ecebc56ed58e57610",
+      "hermes_yolo_vision/skills/yolo-vision/SKILL.md": "194167dadda77032dba73d941d195b2b3c581353151e97b3cd3a92fa5f18a049",
+      "hermes_yolo_vision/worker.py": "b3786e36c6df76a141e069405710527ea8e6ba1edee54b41f255e8ccab8cc1a8",
+      "plugin.yaml": "5092916cec6ac8b704cfc989bc073001750dabc11f2edbf5b2994c63a90c3b0e",
+      "pyproject.toml": "5d0811f97babbc0dd84947040b3239e0de6732fbb8264e388e93f459c48b3da6"
+    },
+    "runtime": {
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "packages": {
+        "ultralytics": "8.4.212",
+        "torch": "2.15.0+cpu",
+        "torchvision": "0.29.2+cpu",
+        "av": "19.0.2",
+        "lap": "0.5.12",
+        "clip": "1.0",
+        "numpy": "2.5.4",
+        "pillow": "13.0.0",
+        "shapely": "2.2.0"
+      }
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex",
+    "fixture_manifest_sha256": "befd8f06d0020cbe1392113054b0acab96f271c23fabce2bdffda970112c9ddd"
+  },
+  "late_completion_replays": {
+    "scope": "Direct AIAgent CLI conversation replays with synthetic notification and prior explicit MEDIA history; no actual gateway queue or Telegram send. Passing means no redundant retrieval/file references, not exactly-once delivery. A short acknowledgment remains.",
+    "review_sha256": "db3805d369f1b6322f9fe00f96bba770dbbacff65d2cc13981a2c02c03f7934f",
+    "same_normalized_prior_history": true,
+    "runs": [
+      {
+        "variant": "corrected",
+        "repeat": 4,
+        "result_sha256": "2391948bc5e0a44960871266abda1b46762067cf23ac066aa8fe5725a1b36121",
+        "completed": true,
+        "tool_calls": [],
+        "repeated_file_names": [],
+        "no_redundant_tool_or_file_reference_grade": "pass"
+      },
+      {
+        "variant": "corrected",
+        "repeat": 5,
+        "result_sha256": "334bca8962cb20bae1efb7d4223aa688885ea7e1f0669243c7300dc846213840",
+        "completed": true,
+        "tool_calls": [],
+        "repeated_file_names": [],
+        "no_redundant_tool_or_file_reference_grade": "pass"
+      },
+      {
+        "variant": "corrected",
+        "repeat": 6,
+        "result_sha256": "cc4f9dc6d51de8bcdb85bdf47b8844f13552d73a39c0f3526ac379eb887e68b5",
+        "completed": true,
+        "tool_calls": [],
+        "repeated_file_names": [],
+        "no_redundant_tool_or_file_reference_grade": "pass"
+      },
+      {
+        "variant": "original",
+        "repeat": 4,
+        "result_sha256": "efef4b96dcff45c963dabb548a0daaf051d1099970190117bd3cb69af6f5c92f",
+        "completed": true,
+        "tool_calls": [
+          {
+            "name": "yolo_job",
+            "arguments": {
+              "job_id": "b10434c32a6b4838a1dc0f32325146ce",
+              "action": "result",
+              "wait_seconds": 30
+            }
+          }
+        ],
+        "repeated_file_names": [
+          "annotated.mp4",
+          "joints.csv"
+        ],
+        "no_redundant_tool_or_file_reference_grade": "fail"
+      },
+      {
+        "variant": "original",
+        "repeat": 5,
+        "result_sha256": "8178349bcded5e867d81cad13fb999076ba087c97c4fc79cfdb495536e1ecdee",
+        "completed": true,
+        "tool_calls": [
+          {
+            "name": "yolo_job",
+            "arguments": {
+              "job_id": "b10434c32a6b4838a1dc0f32325146ce",
+              "action": "result",
+              "wait_seconds": 30
+            }
+          }
+        ],
+        "repeated_file_names": [
+          "annotated.mp4",
+          "joints.csv"
+        ],
+        "no_redundant_tool_or_file_reference_grade": "fail"
+      },
+      {
+        "variant": "original",
+        "repeat": 6,
+        "result_sha256": "f6aa7191439b94dd6a1af3565d552f841b4a75c039f08b15968c7d7e7b834003",
+        "completed": true,
+        "tool_calls": [
+          {
+            "name": "yolo_job",
+            "arguments": {
+              "job_id": "b10434c32a6b4838a1dc0f32325146ce",
+              "action": "result",
+              "wait_seconds": 30
+            }
+          }
+        ],
+        "repeated_file_names": [
+          "annotated.mp4",
+          "joints.csv"
+        ],
+        "no_redundant_tool_or_file_reference_grade": "fail"
+      }
+    ]
+  },
+  "linux_media": {
+    "log_sha256": "6771ce0a4a8dc002cf466c3ab11829475a2c61778f0db9fec2335bbb7e1287de",
+    "script_sha256_matches_06ff6b4": "8e7637b6fec881548c8f63bc3056e92970b66c08bcfe6e3702c9b5630e09f5cc",
+    "checks": [
+      {
+        "check": "rotated-anamorphic-offset-vfr-video",
+        "passed": true
+      },
+      {
+        "check": "mirrored-video-rejected",
+        "passed": true
+      },
+      {
+        "check": "exif-and-custom-checkpoint",
+        "passed": true
+      },
+      {
+        "check": "renamed-custom-yoloe-checkpoint",
+        "passed": true
+      },
+      {
+        "check": "corrupt-image",
+        "passed": true
+      }
+    ],
+    "scope": "Reviewed 5 pass markers and script assertions; no independent decode of Linux-generated artifacts in this copied evidence set."
+  }
+}

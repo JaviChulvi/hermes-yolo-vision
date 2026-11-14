@@ -1,0 +1,4372 @@
+{
+  "study": "heldout-v1",
+  "candidate": "952d6077d3a0967c3a00f6efee9da219d1014733",
+  "attempted": 216,
+  "reviewed": 216,
+  "planned": 216,
+  "arms": {
+    "stock": {
+      "planned": 72,
+      "attempted": 72,
+      "passed": 65,
+      "failed": 7,
+      "pending_review": 0,
+      "latency_all_attempted_p50": 51.949703516904265,
+      "latency_all_attempted_p95": 192.23860188322143,
+      "tool_calls_total": 462
+    },
+    "skill": {
+      "planned": 72,
+      "attempted": 72,
+      "passed": 68,
+      "failed": 4,
+      "pending_review": 0,
+      "latency_all_attempted_p50": 49.278344449121505,
+      "latency_all_attempted_p95": 147.9775004845113,
+      "tool_calls_total": 394
+    },
+    "plugin": {
+      "planned": 72,
+      "attempted": 72,
+      "passed": 66,
+      "failed": 6,
+      "pending_review": 0,
+      "latency_all_attempted_p50": 41.735822055954486,
+      "latency_all_attempted_p95": 129.62162695815786,
+      "tool_calls_total": 468
+    }
+  },
+  "paired_success_count": 64,
+  "median_paired_latency_ratio": 0.8804650178546691,
+  "summed_paired_latency_ratio": 0.8760801242189709,
+  "paired_eligible": [
+    {
+      "case_id": "classify-dog",
+      "repeat": 0,
+      "plugin_seconds": 30.24393619503826,
+      "skill_seconds": 42.083600419573486,
+      "ratio": 0.7186632297024547
+    },
+    {
+      "case_id": "classify-dog",
+      "repeat": 1,
+      "plugin_seconds": 34.67723690904677,
+      "skill_seconds": 56.07280204631388,
+      "ratio": 0.6184323886722258
+    },
+    {
+      "case_id": "classify-dog",
+      "repeat": 2,
+      "plugin_seconds": 31.13113322854042,
+      "skill_seconds": 36.597393485717475,
+      "ratio": 0.8506379898527385
+    },
+    {
+      "case_id": "classify-zebra",
+      "repeat": 0,
+      "plugin_seconds": 35.16675210837275,
+      "skill_seconds": 50.09879711922258,
+      "ratio": 0.7019480332967813
+    },
+    {
+      "case_id": "classify-zebra",
+      "repeat": 1,
+      "plugin_seconds": 31.77942984737456,
+      "skill_seconds": 36.91825959645212,
+      "ratio": 0.8608052003195892
+    },
+    {
+      "case_id": "classify-zebra",
+      "repeat": 2,
+      "plugin_seconds": 35.85182757116854,
+      "skill_seconds": 45.09065689984709,
+      "ratio": 0.7951054616658317
+    },
+    {
+      "case_id": "depth-forest",
+      "repeat": 0,
+      "plugin_seconds": 44.988465200178325,
+      "skill_seconds": 52.289575792849064,
+      "ratio": 0.8603715849293768
+    },
+    {
+      "case_id": "depth-forest",
+      "repeat": 1,
+      "plugin_seconds": 45.241677173413336,
+      "skill_seconds": 46.30361573398113,
+      "ratio": 0.9770657529928388
+    },
+    {
+      "case_id": "depth-forest",
+      "repeat": 2,
+      "plugin_seconds": 42.3821014938876,
+      "skill_seconds": 58.10914584528655,
+      "ratio": 0.729353372474763
+    },
+    {
+      "case_id": "depth-room",
+      "repeat": 0,
+      "plugin_seconds": 45.70344192907214,
+      "skill_seconds": 67.01441392488778,
+      "ratio": 0.6819942047139029
+    },
+    {
+      "case_id": "depth-room",
+      "repeat": 1,
+      "plugin_seconds": 41.37614479288459,
+      "skill_seconds": 56.9434968912974,
+      "ratio": 0.7266175604190556
+    },
+    {
+      "case_id": "depth-room",
+      "repeat": 2,
+      "plugin_seconds": 42.095499319024384,
+      "skill_seconds": 53.98236400075257,
+      "ratio": 0.7798009608922931
+    },
+    {
+      "case_id": "detect-giraffes",
+      "repeat": 0,
+      "plugin_seconds": 37.94312420953065,
+      "skill_seconds": 42.05248572956771,
+      "ratio": 0.9022801756247264
+    },
+    {
+      "case_id": "detect-giraffes",
+      "repeat": 1,
+      "plugin_seconds": 34.33244949299842,
+      "skill_seconds": 48.45789177902043,
+      "ratio": 0.7085006844615238
+    },
+    {
+      "case_id": "detect-zebra",
+      "repeat": 0,
+      "plugin_seconds": 34.55274414550513,
+      "skill_seconds": 36.885689148679376,
+      "ratio": 0.9367520288486254
+    },
+    {
+      "case_id": "detect-zebra",
+      "repeat": 1,
+      "plugin_seconds": 34.88728630822152,
+      "skill_seconds": 32.74844995792955,
+      "ratio": 1.0653110713038214
+    },
+    {
+      "case_id": "detect-zebra",
+      "repeat": 2,
+      "plugin_seconds": 32.96524534467608,
+      "skill_seconds": 41.68463240657002,
+      "ratio": 0.7908249021641929
+    },
+    {
+      "case_id": "followup-filter",
+      "repeat": 0,
+      "plugin_seconds": 38.132485369220376,
+      "skill_seconds": 36.475604405626655,
+      "ratio": 1.0454243593928805
+    },
+    {
+      "case_id": "followup-filter",
+      "repeat": 1,
+      "plugin_seconds": 34.92670710850507,
+      "skill_seconds": 41.396848514676094,
+      "ratio": 0.8437044934984068
+    },
+    {
+      "case_id": "followup-filter",
+      "repeat": 2,
+      "plugin_seconds": 35.38801782857627,
+      "skill_seconds": 42.27921180985868,
+      "ratio": 0.8370075106349186
+    },
+    {
+      "case_id": "followup-timeline",
+      "repeat": 0,
+      "plugin_seconds": 151.9120941432193,
+      "skill_seconds": 240.89659174531698,
+      "ratio": 0.6306112221953943
+    },
+    {
+      "case_id": "followup-timeline",
+      "repeat": 1,
+      "plugin_seconds": 129.29507100209594,
+      "skill_seconds": 162.1988605838269,
+      "ratio": 0.7971392063834766
+    },
+    {
+      "case_id": "followup-timeline",
+      "repeat": 2,
+      "plugin_seconds": 152.86800567805767,
+      "skill_seconds": 157.86421613488346,
+      "ratio": 0.9683512161327499
+    },
+    {
+      "case_id": "negative-corrupt",
+      "repeat": 0,
+      "plugin_seconds": 25.470390901900828,
+      "skill_seconds": 15.530816652812064,
+      "ratio": 1.639990444242935
+    },
+    {
+      "case_id": "negative-corrupt",
+      "repeat": 1,
+      "plugin_seconds": 23.879424769431353,
+      "skill_seconds": 15.08121787570417,
+      "ratio": 1.5833883553861448
+    },
+    {
+      "case_id": "negative-corrupt",
+      "repeat": 2,
+      "plugin_seconds": 23.872038452886045,
+      "skill_seconds": 14.871318732388318,
+      "ratio": 1.6052401863255756
+    },
+    {
+      "case_id": "negative-distance",
+      "repeat": 0,
+      "plugin_seconds": 17.86723893880844,
+      "skill_seconds": 15.48917437903583,
+      "ratio": 1.1535307500308896
+    },
+    {
+      "case_id": "negative-distance",
+      "repeat": 1,
+      "plugin_seconds": 15.68808851018548,
+      "skill_seconds": 25.937419893220067,
+      "ratio": 0.6048438346902145
+    },
+    {
+      "case_id": "negative-distance",
+      "repeat": 2,
+      "plugin_seconds": 18.68456011172384,
+      "skill_seconds": 22.906159781850874,
+      "ratio": 0.8157002435007935
+    },
+    {
+      "case_id": "negative-missing",
+      "repeat": 0,
+      "plugin_seconds": 4.087692496366799,
+      "skill_seconds": 3.8563347049057484,
+      "ratio": 1.0599942196839744
+    },
+    {
+      "case_id": "negative-missing",
+      "repeat": 1,
+      "plugin_seconds": 7.39226536359638,
+      "skill_seconds": 4.030730149708688,
+      "ratio": 1.8339767459080927
+    },
+    {
+      "case_id": "negative-missing",
+      "repeat": 2,
+      "plugin_seconds": 5.0105547634884715,
+      "skill_seconds": 4.894785447977483,
+      "ratio": 1.023651560776545
+    },
+    {
+      "case_id": "negative-recovery",
+      "repeat": 0,
+      "plugin_seconds": 59.72341097611934,
+      "skill_seconds": 17.433675602078438,
+      "ratio": 3.425749815431872
+    },
+    {
+      "case_id": "negative-recovery",
+      "repeat": 1,
+      "plugin_seconds": 31.85892419796437,
+      "skill_seconds": 15.17785962484777,
+      "ratio": 2.0990393234239644
+    },
+    {
+      "case_id": "negative-recovery",
+      "repeat": 2,
+      "plugin_seconds": 27.20910372119397,
+      "skill_seconds": 19.215160767547786,
+      "ratio": 1.4160226942855998
+    },
+    {
+      "case_id": "obb-aerial-a",
+      "repeat": 0,
+      "plugin_seconds": 39.91350519191474,
+      "skill_seconds": 43.66574390884489,
+      "ratio": 0.9140690531973257
+    },
+    {
+      "case_id": "obb-aerial-a",
+      "repeat": 1,
+      "plugin_seconds": 40.27674714382738,
+      "skill_seconds": 44.42509770207107,
+      "ratio": 0.906621464603998
+    },
+    {
+      "case_id": "obb-aerial-a",
+      "repeat": 2,
+      "plugin_seconds": 37.35911356564611,
+      "skill_seconds": 46.56328344065696,
+      "ratio": 0.8023298789325887
+    },
+    {
+      "case_id": "obb-aerial-b",
+      "repeat": 0,
+      "plugin_seconds": 38.76244816649705,
+      "skill_seconds": 53.60647783521563,
+      "ratio": 0.7230926136511228
+    },
+    {
+      "case_id": "obb-aerial-b",
+      "repeat": 1,
+      "plugin_seconds": 39.45246669650078,
+      "skill_seconds": 55.06480249017477,
+      "ratio": 0.7164734079186118
+    },
+    {
+      "case_id": "obb-aerial-b",
+      "repeat": 2,
+      "plugin_seconds": 38.86809803266078,
+      "skill_seconds": 48.0555113106966,
+      "ratio": 0.808816657497705
+    },
+    {
+      "case_id": "pose-photo",
+      "repeat": 2,
+      "plugin_seconds": 44.073630389757454,
+      "skill_seconds": 64.01640316937119,
+      "ratio": 0.6884740192783058
+    },
+    {
+      "case_id": "pose-workout",
+      "repeat": 0,
+      "plugin_seconds": 128.2720502242446,
+      "skill_seconds": 126.15793418046087,
+      "ratio": 1.0167576938978695
+    },
+    {
+      "case_id": "pose-workout",
+      "repeat": 2,
+      "plugin_seconds": 130.02075090445578,
+      "skill_seconds": 122.7528844634071,
+      "ratio": 1.0592072966172559
+    },
+    {
+      "case_id": "segment-dog",
+      "repeat": 0,
+      "plugin_seconds": 48.5409667249769,
+      "skill_seconds": 50.11949151661247,
+      "ratio": 0.9685047724174863
+    },
+    {
+      "case_id": "segment-dog",
+      "repeat": 1,
+      "plugin_seconds": 50.20963397435844,
+      "skill_seconds": 50.552325051277876,
+      "ratio": 0.993221062007102
+    },
+    {
+      "case_id": "segment-dog",
+      "repeat": 2,
+      "plugin_seconds": 48.48145044967532,
+      "skill_seconds": 79.45904235821217,
+      "ratio": 0.6101439057258499
+    },
+    {
+      "case_id": "semantic-field",
+      "repeat": 1,
+      "plugin_seconds": 61.42628456931561,
+      "skill_seconds": 62.96932219155133,
+      "ratio": 0.9754954068341116
+    },
+    {
+      "case_id": "semantic-field",
+      "repeat": 2,
+      "plugin_seconds": 59.458984818309546,
+      "skill_seconds": 60.25123003125191,
+      "ratio": 0.9868509703033211
+    },
+    {
+      "case_id": "semantic-outdoors",
+      "repeat": 0,
+      "plugin_seconds": 51.92547138314694,
+      "skill_seconds": 53.88824756350368,
+      "ratio": 0.9635769157636136
+    },
+    {
+      "case_id": "semantic-outdoors",
+      "repeat": 1,
+      "plugin_seconds": 51.241463222540915,
+      "skill_seconds": 59.9142087623477,
+      "ratio": 0.8552472657327813
+    },
+    {
+      "case_id": "semantic-outdoors",
+      "repeat": 2,
+      "plugin_seconds": 55.576193013228476,
+      "skill_seconds": 52.324863015674055,
+      "ratio": 1.062137381928367
+    },
+    {
+      "case_id": "text-umbrella",
+      "repeat": 0,
+      "plugin_seconds": 52.818499783053994,
+      "skill_seconds": 40.14855368435383,
+      "ratio": 1.3155766506138857
+    },
+    {
+      "case_id": "text-umbrella",
+      "repeat": 1,
+      "plugin_seconds": 34.024697329849005,
+      "skill_seconds": 43.57184057123959,
+      "ratio": 0.780887308954023
+    },
+    {
+      "case_id": "text-umbrella",
+      "repeat": 2,
+      "plugin_seconds": 55.18646328151226,
+      "skill_seconds": 38.74658785946667,
+      "ratio": 1.424292210753442
+    },
+    {
+      "case_id": "text-vase",
+      "repeat": 0,
+      "plugin_seconds": 40.00116379838437,
+      "skill_seconds": 45.84258489776403,
+      "ratio": 0.8725765330989315
+    },
+    {
+      "case_id": "text-vase",
+      "repeat": 1,
+      "plugin_seconds": 42.20616355910897,
+      "skill_seconds": 46.639066708274186,
+      "ratio": 0.9049530048083322
+    },
+    {
+      "case_id": "text-vase",
+      "repeat": 2,
+      "plugin_seconds": 39.126800823025405,
+      "skill_seconds": 68.29032433498651,
+      "ratio": 0.5729479425386176
+    },
+    {
+      "case_id": "track-presence",
+      "repeat": 0,
+      "plugin_seconds": 95.10414709057659,
+      "skill_seconds": 117.94227613322437,
+      "ratio": 0.8063618085778635
+    },
+    {
+      "case_id": "track-presence",
+      "repeat": 1,
+      "plugin_seconds": 97.41729748807847,
+      "skill_seconds": 139.8883694978431,
+      "ratio": 0.6963931157234664
+    },
+    {
+      "case_id": "track-presence",
+      "repeat": 2,
+      "plugin_seconds": 92.03718940354884,
+      "skill_seconds": 121.38651377614588,
+      "ratio": 0.7582159380017998
+    },
+    {
+      "case_id": "track-workout",
+      "repeat": 0,
+      "plugin_seconds": 124.69470902904868,
+      "skill_seconds": 127.487618714571,
+      "ratio": 0.9780926986190298
+    },
+    {
+      "case_id": "track-workout",
+      "repeat": 1,
+      "plugin_seconds": 126.86674291361123,
+      "skill_seconds": 134.1094143325463,
+      "ratio": 0.9459943102802935
+    },
+    {
+      "case_id": "track-workout",
+      "repeat": 2,
+      "plugin_seconds": 118.89333619084209,
+      "skill_seconds": 133.83561368472874,
+      "ratio": 0.8883535026104069
+    }
+  ],
+  "paired_excluded": [
+    {
+      "case_id": "detect-giraffes",
+      "repeat": 2,
+      "plugin_grade": "fail",
+      "skill_grade": "pass"
+    },
+    {
+      "case_id": "pose-photo",
+      "repeat": 0,
+      "plugin_grade": "fail",
+      "skill_grade": "fail"
+    },
+    {
+      "case_id": "pose-photo",
+      "repeat": 1,
+      "plugin_grade": "fail",
+      "skill_grade": "fail"
+    },
+    {
+      "case_id": "pose-workout",
+      "repeat": 1,
+      "plugin_grade": "pass",
+      "skill_grade": "fail"
+    },
+    {
+      "case_id": "segment-person",
+      "repeat": 0,
+      "plugin_grade": "fail",
+      "skill_grade": "pass"
+    },
+    {
+      "case_id": "segment-person",
+      "repeat": 1,
+      "plugin_grade": "fail",
+      "skill_grade": "pass"
+    },
+    {
+      "case_id": "segment-person",
+      "repeat": 2,
+      "plugin_grade": "fail",
+      "skill_grade": "pass"
+    },
+    {
+      "case_id": "semantic-field",
+      "repeat": 0,
+      "plugin_grade": "pass",
+      "skill_grade": "fail"
+    }
+  ],
+  "benchmark_gate": "fail",
+  "latency_interpretation": {
+    "recorded_at_utc": "2026-11-13T21:11:23.099803+00:00",
+    "timing": "Fixed after partial artifact grading and root execution-trace inspection, before calculating aggregate arm latency comparisons. Independent artifact reviewer has not inspected arm/latency mappings. This estimator choice is not claimed to have been pre-registered.",
+    "basis": "Frozen protocol requires 25% lower paired latency but leaves estimator unnamed. Require both transparent conventional summaries; this is conservative and does not lower the frozen threshold.",
+    "eligible_pairs": "Same case_id and repeat, plugin and strong-skill grades both pass under the frozen rubric; all other completed or pending pairs reported separately.",
+    "median_paired_ratio": "median(plugin_elapsed_seconds / skill_elapsed_seconds) over eligible pairs",
+    "summed_paired_ratio": "sum(plugin_elapsed_seconds) / sum(skill_elapsed_seconds) over eligible pairs; weights longer cases more heavily",
+    "speed_gate": "Both ratios <= 0.75, no more than 5 percentage points lower overall completion than skill, and plugin >=90% completion. Alternative +15 percentage point completion improvement gate remains unchanged.",
+    "coverage_gate": "No final release-gate verdict until all216 planned runs are attempted and graded; quota stops remain incomplete.",
+    "limits": "24 descriptive cases, repeated3times and shared scenes; no independence or statistical significance claim."
+  },
+  "grading": "AI-assisted artifact/answer review with independent numeric checks; not human adjudication",
+  "provenance": {
+    "study_sha256": "33c2d56e8f2d1bfeeeb5f65201c85f5aa4567cb63abe01c74f788e9ca9bc701f",
+    "fixture_manifest_sha256": "befd8f06d0020cbe1392113054b0acab96f271c23fabce2bdffda970112c9ddd",
+    "hermes_commit": "2bd378ed1b8d6bf2192cb26e0a55ff3091e6bd19",
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex",
+    "reasoning": "low",
+    "observed_turn_fields": {
+      "requested_model": {
+        "gpt-6.1-sol": 233,
+        "None": 1
+      },
+      "model": {
+        "gpt-6.1-sol": 233,
+        "None": 1
+      },
+      "served_model": {
+        "None": 234
+      },
+      "provider": {
+        "openai-codex": 233,
+        "None": 1
+      }
+    },
+    "runtime": {
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "packages": {
+        "ultralytics": "8.4.212",
+        "torch": "2.15.0+cpu",
+        "torchvision": "0.29.2+cpu",
+        "av": "19.0.2",
+        "lap": "0.5.12",
+        "clip": "1.0",
+        "numpy": "2.5.4",
+        "pillow": "13.0.0",
+        "shapely": "2.2.0"
+      }
+    },
+    "sources": {
+      "evals/README.md": "72d5c90b0329f71a52a5cd7f8b451e744f049f6d5a6b70223b134d43e2b4a822",
+      "evals/RUBRIC.md": "0783a8c5303b936875689941fe1e2ba1a8a707fc981ced040474e6aef511733d",
+      "evals/annotations.json": "d9721f53e18e954c86efee6338e983859f3bf0b65908d6a991faca44259bc385",
+      "evals/baseline-skill/SKILL.md": "d2379b6a9b1eeae528b79e4fe5ff5a39b8b7db6f4a2b7d572fecdc674fb7a84e",
+      "evals/cases.py": "153bd774e30d423d1142a4b89a5c14db39dc964449cc45546a5c6d99f802a141",
+      "evals/fixtures.json": "584da146978d485ab93566452cd97714d0a651ee27ebfdb1bfc8ad90859a15b1",
+      "evals/inspect_artifacts.py": "f95f83a05f5ab4de2b9ae2709e748db686e5260875ef609281d5c911102fd494",
+      "evals/metrics.py": "946969f73a120a8256eb54b7d9e81ce9e5d9adff3e316ae66b35b4d34bdb3697",
+      "evals/prepare.py": "299690229ce1eb5d7322e38694c8c7ad743e2a7a470b66ee3b37ef7ea3c4151f",
+      "evals/run.py": "3caa772963752696236ab4c7232b96bb2d49fc71ecb926ad8d812a6f7e74a719",
+      "hermes_yolo_vision/__init__.py": "75ca9568aa6705f6c4a44a302001f1ad1391dec698ce592c852ed0ad777a5d4e",
+      "hermes_yolo_vision/cli.py": "425e9041cbb9da7caa0ff9ac155e1092a14c38dd2b6fc2bc1b6c1a3823fc1ed6",
+      "hermes_yolo_vision/jobs.py": "aa06560cdf4aca67afdce5a76cb31572d5abac105a470c08d683b4a82698c09a",
+      "hermes_yolo_vision/plugin.py": "1238ccbf4ad8888f80ea30f827c1fcb4aaf6e5e327f5346ea9c450f99e588885",
+      "hermes_yolo_vision/requests.py": "b685a77a35b0ff0ec754dd19ab9ce6606c3cca1ee2536f03cefbe19cb4d431c4",
+      "hermes_yolo_vision/schemas.py": "6edf50f0241368bcd1e19e87aae16a0b77cc9548fb8a1f2ecebc56ed58e57610",
+      "hermes_yolo_vision/skills/yolo-vision/SKILL.md": "736b002007b439f967cee96c10fc88c05988c55e3914acab165c820bb93bbcc5",
+      "hermes_yolo_vision/worker.py": "80e07f5e3ffb75ac55c6817e66e1446aea82ff32be39d9a249aec9716cff392f",
+      "plugin.yaml": "5092916cec6ac8b704cfc989bc073001750dabc11f2edbf5b2994c63a90c3b0e",
+      "pyproject.toml": "5d0811f97babbc0dd84947040b3239e0de6732fbb8264e388e93f459c48b3da6"
+    },
+    "initial_warmed_model_weights": {
+      "mobileclip2_b.ts": "35d7f213e4d75f38514e4656ad3cb91158bd33e3805d8ac349f23b186f66982f",
+      "yolo26n-cls.pt": "0dd6f8dbc448870ac98a3cbb7156f923f7ce21fed3755d4019169ffffd279e81",
+      "yolo26n-depth.pt": "befed1b8561d8b2eaa66274b070cdfc9c44853bda6d6d62a04759f9383af74e9",
+      "yolo26n-obb.pt": "6f51c78197aacda4a33be77294065a9001675fb893f56227a179731b53dbd2b0",
+      "yolo26n-pose.pt": "eb3bb8268828aeaf515cec23a4bfafd793944a86fe9af94ba7823609c14522a9",
+      "yolo26n-seg.pt": "361fbfabab285c3237700b6bb91d7ecfa602cd945fffda8dbe1242829b71e73f",
+      "yolo26n-sem-ade20k.pt": "68ac71bef2868c987fff7cd7c49cb656922f6d8447ad21af3893305577435000",
+      "yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "yoloe-26s-seg.pt": "48f24206bc8680d60cbbfa296b0140da849669b9515058b72f5a945142df0654"
+    },
+    "additional_model_observation": {
+      "observed_at": 1794607886.2513866,
+      "additional_weights_not_in_initial_warmed_inventory": {
+        "yolo11n.pt": {
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+          "size": 5613764,
+          "mtime": 1794607743.1221774
+        }
+      },
+      "scope": "Post-launch observation; not an initial freeze. Agent-selected downloads are allowed; any first-use download time stays included in that conversation."
+    },
+    "final_model_inventory": {
+      "observed_at": 1794651539.4018838,
+      "scope": "Post-study and post-retest inventory; initial freeze preserved separately",
+      "frozen_sources_match": true,
+      "frozen_source_count": 20,
+      "final_model_weights": {
+        "yolo26n-seg.pt": "361fbfabab285c3237700b6bb91d7ecfa602cd945fffda8dbe1242829b71e73f",
+        "yolo26n-sem-ade20k.pt": "68ac71bef2868c987fff7cd7c49cb656922f6d8447ad21af3893305577435000",
+        "yolo26n-pose.pt": "eb3bb8268828aeaf515cec23a4bfafd793944a86fe9af94ba7823609c14522a9",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "mobileclip2_b.ts": "35d7f213e4d75f38514e4656ad3cb91158bd33e3805d8ac349f23b186f66982f",
+        "yolo26n-cls.pt": "0dd6f8dbc448870ac98a3cbb7156f923f7ce21fed3755d4019169ffffd279e81",
+        "yoloe-26s-seg.pt": "48f24206bc8680d60cbbfa296b0140da849669b9515058b72f5a945142df0654",
+        "yolo26n-obb.pt": "6f51c78197aacda4a33be77294065a9001675fb893f56227a179731b53dbd2b0",
+        "yolo26n-depth.pt": "befed1b8561d8b2eaa66274b070cdfc9c44853bda6d6d62a04759f9383af74e9",
+        "yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+      },
+      "additional_weights": {
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+      }
+    }
+  },
+  "cases": {
+    "classify-dog": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "classify-zebra": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "depth-forest": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "depth-room": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "detect-giraffes": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 2,
+        "fail": 1
+      }
+    },
+    "detect-zebra": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "followup-filter": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "followup-timeline": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "negative-corrupt": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "negative-distance": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "negative-missing": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "negative-recovery": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "obb-aerial-a": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "obb-aerial-b": {
+      "stock": {
+        "fail": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "pose-photo": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "fail": 2,
+        "pass": 1
+      },
+      "plugin": {
+        "fail": 2,
+        "pass": 1
+      }
+    },
+    "pose-workout": {
+      "stock": {
+        "pass": 2,
+        "fail": 1
+      },
+      "skill": {
+        "pass": 2,
+        "fail": 1
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "segment-dog": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "segment-person": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "fail": 3
+      }
+    },
+    "semantic-field": {
+      "stock": {
+        "fail": 3
+      },
+      "skill": {
+        "pass": 2,
+        "fail": 1
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "semantic-outdoors": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "text-umbrella": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "text-vase": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "track-presence": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    },
+    "track-workout": {
+      "stock": {
+        "pass": 3
+      },
+      "skill": {
+        "pass": 3
+      },
+      "plugin": {
+        "pass": 3
+      }
+    }
+  },
+  "runs": [
+    {
+      "review_id": "00ba0d1e2adb4f00b222e5108eccabc6",
+      "case_id": "semantic-outdoors",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 52.324863015674055,
+      "tool_calls": 5,
+      "review_sha256": "61dff1d8d9704193d9b6ae65969ccf4aa7aadccf6bddf3f88a663dcc8eb7b9b2",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "02ec7d5f29cf4001a5c17ed368cdde1f",
+      "case_id": "detect-giraffes",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.5039923414588,
+      "tool_calls": 4,
+      "review_sha256": "824f9a26a2aa86b86f8b9042fd535abbeb509c70782e5bc22e180fb7a3cd13e7",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "050dfdcf345e494187cd5df5b3bcc5e1",
+      "case_id": "classify-zebra",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 39.29170349985361,
+      "tool_calls": 5,
+      "review_sha256": "659b42e7b3bf2f76966fefb8a9b53e12f012c9c7a4bb4d5cd87a5a01f7ac8099",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "051afd7b4987421295f46ee736bc47c0",
+      "case_id": "negative-recovery",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 31.85892419796437,
+      "tool_calls": 6,
+      "review_sha256": "824f9a26a2aa86b86f8b9042fd535abbeb509c70782e5bc22e180fb7a3cd13e7",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "0551574943034f1dbebd68798009d057",
+      "case_id": "track-presence",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 139.8883694978431,
+      "tool_calls": 7,
+      "review_sha256": "3d14234e0d6e0888122c886eaeb477d1482380337724651bde8a517b471e4706",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "05e0339019c24381a8f5a2242de5d845",
+      "case_id": "followup-filter",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 38.132485369220376,
+      "tool_calls": 5,
+      "review_sha256": "4563d1d02255bcc69aec1ff1eab2055841a090128312dd7c1f721ef6b3f84cb5",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "06b0b6ca518949819b641cb3f27107d6",
+      "case_id": "classify-zebra",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.984217355027795,
+      "tool_calls": 5,
+      "review_sha256": "5b2d7ec5aa1bbe31ad7584ef7b8fcfa3ea6e35475c63edae67d2d94d2f5621ea",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "06e4ea88622042bbab148c07c7af15c1",
+      "case_id": "followup-filter",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.475604405626655,
+      "tool_calls": 4,
+      "review_sha256": "4563d1d02255bcc69aec1ff1eab2055841a090128312dd7c1f721ef6b3f84cb5",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "071b195c285a497093dc641fb75d632b",
+      "case_id": "followup-timeline",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 240.89659174531698,
+      "tool_calls": 11,
+      "review_sha256": "5e4b6801c4624b19e726864845ad43525ea3bd99a7a1c95ddf3d1f81134a758b",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "07505297de794927b2c0ddf4f7329f93",
+      "case_id": "text-vase",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 45.73923285957426,
+      "tool_calls": 5,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "0995700e7d2f41c58de2dfd327bab291",
+      "case_id": "segment-dog",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 48.48145044967532,
+      "tool_calls": 7,
+      "review_sha256": "13d66e323b47b3bc792bfde34d65fe00271cd4614d9711f891070cf2827946f4",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "0a1b3e3d90b74c90b7a59744a1ffe82a",
+      "case_id": "semantic-outdoors",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 51.241463222540915,
+      "tool_calls": 7,
+      "review_sha256": "8a5634a6b79f4322b3eea44e1a04a2187f92fa773f3c5f8410eacd4c110541b0",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "0af5325c21414cf8b4b8b991aeb2f8ae",
+      "case_id": "pose-workout",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 196.18969879765064,
+      "tool_calls": 9,
+      "review_sha256": "a24f492d8adb0f50a0f14fe7a970536fedaf04805928052840750e5f1701cb6a",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "0eeb8133c4f5459c90f7952b9fe57202",
+      "case_id": "followup-filter",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 43.97640024125576,
+      "tool_calls": 6,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "0f72d7348fa84ce795452bc8167281a7",
+      "case_id": "pose-photo",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 48.00696745887399,
+      "tool_calls": 6,
+      "review_sha256": "5646acbaae71d3dda5a778e269f16898449029cdb1378d3548981c46c2e8f2b2",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "0fa31655b2e742a28b5788449039c4b0",
+      "case_id": "negative-distance",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 15.68808851018548,
+      "tool_calls": 3,
+      "review_sha256": "75db7e046744c160c5d85808e3c4582a0a1b5e73ab40ebd28696f6d6ae525a49",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1063bba2b61e4ba798e9e17c5b066c26",
+      "case_id": "pose-workout",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 122.7528844634071,
+      "tool_calls": 7,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "11053e894b82480fb10904e92ba7c5c9",
+      "case_id": "text-umbrella",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 45.57766242604703,
+      "tool_calls": 6,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1161acddb79c4cbaa7b03f46b7958a1e",
+      "case_id": "negative-recovery",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 17.433675602078438,
+      "tool_calls": 2,
+      "review_sha256": "29f2b37d27c8e249c6197c8883fb30400aa1a64083d132e0b2e012867c25d936",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "120be39bdd4d4a61bc2d8de18567b826",
+      "case_id": "text-vase",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 45.84258489776403,
+      "tool_calls": 6,
+      "review_sha256": "4563d1d02255bcc69aec1ff1eab2055841a090128312dd7c1f721ef6b3f84cb5",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1247b267278442a194b00297ee20d39a",
+      "case_id": "followup-filter",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 35.38801782857627,
+      "tool_calls": 5,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "1366dfacde62489ea54782ac95cdff3d",
+      "case_id": "pose-workout",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 135.30416273511946,
+      "tool_calls": 11,
+      "review_sha256": "03d270389722d87a86e5df7a848ade750817cafdb76d07d82feb6acba371bbed",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "13b89affd24b4b388b0b423284982831",
+      "case_id": "negative-distance",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 18.68456011172384,
+      "tool_calls": 3,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "13c8c1db2c114e33bffcda49206fd5f9",
+      "case_id": "obb-aerial-b",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 101.98078713472933,
+      "tool_calls": 12,
+      "review_sha256": "29060b43eb373be57263b84e74a0fd7605c70271fb4bd3fdafafe06f7d4a79d7",
+      "failed_checks": [
+        "required_dota_target",
+        "rotated_visual_overlay"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1550ef60d6cb4019b9339bcdb2093c3a",
+      "case_id": "semantic-field",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 59.458984818309546,
+      "tool_calls": 8,
+      "review_sha256": "7c896ffd4dbb103823cd9c536b4240d80887f8c3eb7b4f61fc623502761e0ede",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "158f859f4263484086a4f15374feae7e",
+      "case_id": "negative-missing",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 4.894785447977483,
+      "tool_calls": 0,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "163dccf841ac4b8da481d39644201cb0",
+      "case_id": "detect-zebra",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 41.68463240657002,
+      "tool_calls": 5,
+      "review_sha256": "f95a023b8adc71d3d475c2eaad551f7a17645134d23395d34265b97ad44e4884",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "16434941ed914d7ab5d3fffaef2271c7",
+      "case_id": "negative-recovery",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 22.90972149465233,
+      "tool_calls": 4,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "18dde1623766453a9459a6a1eb400b87",
+      "case_id": "followup-timeline",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 162.1988605838269,
+      "tool_calls": 8,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "1a85917721aa49768b5c894d401bcb65",
+      "case_id": "obb-aerial-a",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 37.35911356564611,
+      "tool_calls": 5,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1aaa46f22eed4124820d7a8bca4ae876",
+      "case_id": "text-vase",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 50.63195089250803,
+      "tool_calls": 6,
+      "review_sha256": "fdda393f237d6625bd28b5aea98b75cab63a683aa8a498105273d2f0c80a0b8d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1c21af2086ff414eb9c3ea51deb54049",
+      "case_id": "pose-workout",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 208.7790059717372,
+      "tool_calls": 9,
+      "review_sha256": "2fb6123515692dd738515ea94b494951a14ee7912395a6eb652ae7412c849bec",
+      "failed_checks": [
+        "movement_answer_consistency"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1cd75b56c60d4e718f1e661dc8859b3d",
+      "case_id": "detect-zebra",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 40.548951771110296,
+      "tool_calls": 6,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "1ff3f756af664cdf945fdb470e43b825",
+      "case_id": "negative-distance",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 17.86723893880844,
+      "tool_calls": 3,
+      "review_sha256": "2a1e3bb841733af805ed0ddf766106f22af328cf3873e30286566d9895601289",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "24b709170cdc4bcca8b2b92194f12895",
+      "case_id": "negative-missing",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 4.087692496366799,
+      "tool_calls": 0,
+      "review_sha256": "d392afccf167a6f042ab231fa7516bb526ad77376b61405ba772d06f89bbd337",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "24d8d7d3076f4c739c5b2f1076b26bce",
+      "case_id": "text-vase",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.20616355910897,
+      "tool_calls": 6,
+      "review_sha256": "c2cf20f5a0b91443e3e3ae6b59c37a6f5ba5ffce038c19e7ae7c7e82bd9d6c80",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "24dcfab8f1fe4dd18e6eca789c49e8e5",
+      "case_id": "semantic-outdoors",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 75.43875588662922,
+      "tool_calls": 7,
+      "review_sha256": "3acd6828278c7fdda1599544d183fd1b3aebc2b480ae4831b61b73f5d989c16d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "251b184f06a94ceebb9a78e5032f1ed1",
+      "case_id": "followup-timeline",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 152.86800567805767,
+      "tool_calls": 13,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "25bbed49e5f64f0fad783d261912ee1f",
+      "case_id": "detect-zebra",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 38.163025392219424,
+      "tool_calls": 5,
+      "review_sha256": "6fd7134abb031d7c8fd9efe4564f984b20950fbbee2b7b470492443ca7cbb485",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "27282c0bd27f42c6b3c532ed2d3cd562",
+      "case_id": "track-workout",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 159.16161594633013,
+      "tool_calls": 8,
+      "review_sha256": "24d75e8db6e0491af4cf8dc1a1bc6e2dd8f0fe5f282981fae03f47875b567056",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "2741fec694cc42fa8390eb13b96dcb6a",
+      "case_id": "followup-timeline",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 157.86421613488346,
+      "tool_calls": 9,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "27c4833d786e4072a2fdf26c868ed634",
+      "case_id": "detect-giraffes",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 51.49581247474998,
+      "tool_calls": 6,
+      "review_sha256": "824f9a26a2aa86b86f8b9042fd535abbeb509c70782e5bc22e180fb7a3cd13e7",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "2a7b9ffa319b48ceb1a6d5214b6567a8",
+      "case_id": "segment-person",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 60.365035297349095,
+      "tool_calls": 8,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [
+        "required_outline_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "2cb765a06e604d5abe03878ccece4364",
+      "case_id": "detect-giraffes",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 37.94312420953065,
+      "tool_calls": 5,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "2d4001b8b0f84f168a663188143dc199",
+      "case_id": "classify-dog",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 56.07280204631388,
+      "tool_calls": 5,
+      "review_sha256": "2e32f4179cfd74069396e159338a90ff57f9a819171d3ee47f5369b6e0382f69",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "2dd2e7fb77794a8e9503fc3c13cff96b",
+      "case_id": "obb-aerial-a",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 39.91350519191474,
+      "tool_calls": 6,
+      "review_sha256": "f9988875fe2205b7afaf3db8757da5250f4f1fd3bdd1a80db8a6f3b654b59699",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "2dfe2a7dd7614bf0a3e22f7e4df97389",
+      "case_id": "detect-giraffes",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 30.364773620851338,
+      "tool_calls": 5,
+      "review_sha256": "824f9a26a2aa86b86f8b9042fd535abbeb509c70782e5bc22e180fb7a3cd13e7",
+      "failed_checks": [
+        "complete_user_answer",
+        "direct_requested_delivery"
+      ],
+      "turns_completed": [
+        false
+      ]
+    },
+    {
+      "review_id": "2ee36d19825145ad9c387e3521673146",
+      "case_id": "pose-workout",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 199.61653995141387,
+      "tool_calls": 11,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "30b3352d37eb4e449c706bff345b63ec",
+      "case_id": "detect-zebra",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 38.79422188550234,
+      "tool_calls": 5,
+      "review_sha256": "f95a023b8adc71d3d475c2eaad551f7a17645134d23395d34265b97ad44e4884",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "30d11f6218a8484aad7d065e2f85a317",
+      "case_id": "track-workout",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 124.67001720517874,
+      "tool_calls": 8,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3164847cfb6148c7a0b63f1cc14e9824",
+      "case_id": "pose-photo",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 54.65372497495264,
+      "tool_calls": 6,
+      "review_sha256": "b9ec990fe011c40bbdb333c0f39a558fd689dfab13a80ef987c48118d03c0e94",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "319d5d9d09d04f52901866a2b9258a93",
+      "case_id": "obb-aerial-b",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 143.23980833869427,
+      "tool_calls": 17,
+      "review_sha256": "24d75e8db6e0491af4cf8dc1a1bc6e2dd8f0fe5f282981fae03f47875b567056",
+      "failed_checks": [
+        "required_DOTA_localization",
+        "required_visual_overlay"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3289caef13044914939b0c970e9f46b2",
+      "case_id": "depth-room",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 67.01441392488778,
+      "tool_calls": 5,
+      "review_sha256": "3a4c8b9177ad9d65ace4c5d5ab2b4aa8db65d38bc581425e90a06845fef7adde",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "361ca195b17c498cae6ed2628d0deb0f",
+      "case_id": "classify-dog",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.837350209243596,
+      "tool_calls": 5,
+      "review_sha256": "659b42e7b3bf2f76966fefb8a9b53e12f012c9c7a4bb4d5cd87a5a01f7ac8099",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "37946ccda3844084a7a01e900ddf56a4",
+      "case_id": "pose-photo",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 51.038410247303545,
+      "tool_calls": 6,
+      "review_sha256": "5646acbaae71d3dda5a778e269f16898449029cdb1378d3548981c46c2e8f2b2",
+      "failed_checks": [
+        "connecting_skeleton"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3899329a560444cca868c7034763004a",
+      "case_id": "negative-distance",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 15.48917437903583,
+      "tool_calls": 2,
+      "review_sha256": "2a1e3bb841733af805ed0ddf766106f22af328cf3873e30286566d9895601289",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3b671e605e794fadbc33a648bc453e8a",
+      "case_id": "depth-room",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 53.98236400075257,
+      "tool_calls": 8,
+      "review_sha256": "02b11bab38a13de0e537aee13dc8683c54ec8a87edf95dd1adf8e9f97dea6d02",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3b6e53052a2643e889ea961f9cff3a28",
+      "case_id": "negative-missing",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 4.030730149708688,
+      "tool_calls": 0,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3bb1a8396001482bad4c43003114938b",
+      "case_id": "detect-zebra",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 32.96524534467608,
+      "tool_calls": 5,
+      "review_sha256": "f95a023b8adc71d3d475c2eaad551f7a17645134d23395d34265b97ad44e4884",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3e14c2bea2d54e52b6cacfb2123816d4",
+      "case_id": "classify-zebra",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.91825959645212,
+      "tool_calls": 5,
+      "review_sha256": "5b2d7ec5aa1bbe31ad7584ef7b8fcfa3ea6e35475c63edae67d2d94d2f5621ea",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "3f3252d9f65a4135b9f527e3d1a3594b",
+      "case_id": "track-presence",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 140.6302675465122,
+      "tool_calls": 5,
+      "review_sha256": "146df7a6f29fe4d2036b031c95816121b77d5ad5c78e08c647cb388aec149835",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "40347e863272491bba4790911aed8367",
+      "case_id": "negative-corrupt",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 13.846990058198571,
+      "tool_calls": 3,
+      "review_sha256": "6eee6cb25f62c4b18fba74597b246fab50fd24b7b2c8bd5e003f94ef458aa141",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "42adc3876134453ab87a8d9aa6ab5cc3",
+      "case_id": "track-presence",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 159.52332061901689,
+      "tool_calls": 8,
+      "review_sha256": "f0781487fbfd4eb45cb7fed4168d03d895b12442d67e93cb900fe3b60de7fe4f",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "45157ab69be24c78bb787484dcbde574",
+      "case_id": "classify-zebra",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 35.16675210837275,
+      "tool_calls": 5,
+      "review_sha256": "501a7ad3e39a05aa83887b64c7a6a4414c2ca90ebf79da47d9fe25e4b1c9c481",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "47140bf0a6da47d68aed0bc219303400",
+      "case_id": "text-vase",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 46.639066708274186,
+      "tool_calls": 6,
+      "review_sha256": "c2cf20f5a0b91443e3e3ae6b59c37a6f5ba5ffce038c19e7ae7c7e82bd9d6c80",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4a32b46b03054d4296300daa428f7f80",
+      "case_id": "classify-dog",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 34.67723690904677,
+      "tool_calls": 5,
+      "review_sha256": "5646acbaae71d3dda5a778e269f16898449029cdb1378d3548981c46c2e8f2b2",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4a58a958bccf4634a48d8e42596d0adb",
+      "case_id": "obb-aerial-b",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 48.0555113106966,
+      "tool_calls": 6,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4be9b63831c848fcaddbbafcb7148891",
+      "case_id": "detect-zebra",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 34.88728630822152,
+      "tool_calls": 5,
+      "review_sha256": "6fd7134abb031d7c8fd9efe4564f984b20950fbbee2b7b470492443ca7cbb485",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4ce0b90bf780441a8173aeffc4284de0",
+      "case_id": "negative-corrupt",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 23.879424769431353,
+      "tool_calls": 5,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4e70d2d8cdee49d4a2ac051dce86c0bf",
+      "case_id": "classify-zebra",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 35.85182757116854,
+      "tool_calls": 5,
+      "review_sha256": "3166f4138a70c000f1ef4b2e7b8509421a2bdba1106f32f465134b47040244fe",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4ed579eb55ea404bb20f58baeb83ca29",
+      "case_id": "track-presence",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 95.10414709057659,
+      "tool_calls": 8,
+      "review_sha256": "146df7a6f29fe4d2036b031c95816121b77d5ad5c78e08c647cb388aec149835",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "4fda137a727a46be9b4369406e6269a7",
+      "case_id": "negative-corrupt",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 17.674411793239415,
+      "tool_calls": 4,
+      "review_sha256": "75db7e046744c160c5d85808e3c4582a0a1b5e73ab40ebd28696f6d6ae525a49",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "5233042093e747189a9fa9ac87577a02",
+      "case_id": "obb-aerial-b",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 38.76244816649705,
+      "tool_calls": 6,
+      "review_sha256": "cdec918f37182b009e3288cabcfb38beda917cba6a5762c15dbf89118c475bb0",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "53dbe1e8ae8747fb8088f4e12636d785",
+      "case_id": "semantic-field",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 83.77921388857067,
+      "tool_calls": 8,
+      "review_sha256": "038f2f4ded4af60a23ef5c8a0d00319e9a6bc5803ec6e47e582305433cb50481",
+      "failed_checks": [
+        "required_integer_map_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "548eb749031d4617b42d68661d014cff",
+      "case_id": "obb-aerial-b",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 55.06480249017477,
+      "tool_calls": 6,
+      "review_sha256": "24d75e8db6e0491af4cf8dc1a1bc6e2dd8f0fe5f282981fae03f47875b567056",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "555997bf457542279775ae79b1744974",
+      "case_id": "negative-corrupt",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 23.872038452886045,
+      "tool_calls": 5,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "57902a9165cf48dd975d6be9cdcfd2d6",
+      "case_id": "obb-aerial-b",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 39.45246669650078,
+      "tool_calls": 6,
+      "review_sha256": "9b354e87beab9435480c62785f7a221940cfe922707b947b50b1bfae7e6ca7d1",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "5abdbfb9963d4e2ca78f378c8865c85c",
+      "case_id": "segment-dog",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 50.552325051277876,
+      "tool_calls": 6,
+      "review_sha256": "b85824f8aa0f38d54a10b795943f613fab2954e17c6136023d7e58f5d69f41b5",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "5e1f1a62bf224ad3a72e145912bd767a",
+      "case_id": "text-vase",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 40.00116379838437,
+      "tool_calls": 6,
+      "review_sha256": "4563d1d02255bcc69aec1ff1eab2055841a090128312dd7c1f721ef6b3f84cb5",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "5fda5e8a6cae4c678059178105350558",
+      "case_id": "segment-person",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 51.78405759297311,
+      "tool_calls": 6,
+      "review_sha256": "2c230ad32a60a3c596b4e98323ac463a5d5323a30a0e5c5488d3d4ade58c3419",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6187233b961c4aabbc6fe2bea0805374",
+      "case_id": "negative-corrupt",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 15.08121787570417,
+      "tool_calls": 3,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "61f40d91971d4496956ed991c6309be0",
+      "case_id": "track-presence",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 156.070332063362,
+      "tool_calls": 7,
+      "review_sha256": "b54d569fc15215a08a57ac5fbdaa1797dc857f5405f07a1bf472b14eca0edfe6",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "665455c2b4db4859813560d8e47a86be",
+      "case_id": "negative-distance",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 22.906159781850874,
+      "tool_calls": 3,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "67f80f7485c946708ea11ce6939f106e",
+      "case_id": "pose-workout",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 130.02075090445578,
+      "tool_calls": 11,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6893e9ea8ffb47bbbe387af4a8f0c6aa",
+      "case_id": "semantic-field",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 62.96932219155133,
+      "tool_calls": 6,
+      "review_sha256": "c2928da2c7c0204fd429c7d91986026b00136a7a0063f2b388e831f2a6754a94",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "697d18c42eee4760a18821c21957e2a5",
+      "case_id": "pose-photo",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 56.42806231882423,
+      "tool_calls": 7,
+      "review_sha256": "5646acbaae71d3dda5a778e269f16898449029cdb1378d3548981c46c2e8f2b2",
+      "failed_checks": [
+        "connecting_skeleton"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "69ea3c4629104fe9b000a31f029cfa79",
+      "case_id": "segment-dog",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 73.3685347577557,
+      "tool_calls": 7,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6a1299d03eee4a21a8f030b56b291148",
+      "case_id": "classify-dog",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 31.13113322854042,
+      "tool_calls": 5,
+      "review_sha256": "659b42e7b3bf2f76966fefb8a9b53e12f012c9c7a4bb4d5cd87a5a01f7ac8099",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6a8a08a7cbb34e1cbb0996f0ceecdd07",
+      "case_id": "segment-person",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 55.6965021379292,
+      "tool_calls": 8,
+      "review_sha256": "2c230ad32a60a3c596b4e98323ac463a5d5323a30a0e5c5488d3d4ade58c3419",
+      "failed_checks": [
+        "required_outline_direct_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6b7502dc1dc048c79b7a155418cd2c4d",
+      "case_id": "pose-workout",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 128.2720502242446,
+      "tool_calls": 10,
+      "review_sha256": "b9ec990fe011c40bbdb333c0f39a558fd689dfab13a80ef987c48118d03c0e94",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6c119ef792484ed58c00b0a7e961eae0",
+      "case_id": "depth-forest",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 45.241677173413336,
+      "tool_calls": 7,
+      "review_sha256": "2f7c7ab091e50355ad0361b990773644bd8350f082478c578bb9038f47755e19",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6cc9dac79ca6420e8d33764522aeea9e",
+      "case_id": "semantic-field",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 61.42628456931561,
+      "tool_calls": 8,
+      "review_sha256": "2f7c7ab091e50355ad0361b990773644bd8350f082478c578bb9038f47755e19",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6cf7bdc4cca34d759f3b2888a0351c11",
+      "case_id": "pose-workout",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 239.82559947576374,
+      "tool_calls": 8,
+      "review_sha256": "bd772ef2cd7d69324f062ef2949bbf5bdebb63ff05d52eac1e011e7c1729b74e",
+      "failed_checks": [
+        "movement_truthfulness"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "6e3ba80ce4994883add1def18ce3e074",
+      "case_id": "text-vase",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 39.126800823025405,
+      "tool_calls": 6,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "71dd0d1076034f9ab403378867353010",
+      "case_id": "semantic-outdoors",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 62.11419824138284,
+      "tool_calls": 6,
+      "review_sha256": "61dff1d8d9704193d9b6ae65969ccf4aa7aadccf6bddf3f88a663dcc8eb7b9b2",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "7298c00bc351439ba427c93c97cec2ae",
+      "case_id": "followup-timeline",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 151.9120941432193,
+      "tool_calls": 14,
+      "review_sha256": "019f69da7314cb067e2541280d0d51c4a148a39e6c2a6beae1227b1a51af4f44",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "72e8e2ace93b438f8da84acfaed254d2",
+      "case_id": "text-umbrella",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 40.14855368435383,
+      "tool_calls": 5,
+      "review_sha256": "5a769c466bc82795ea623952ab1bfb4abfb693e43806d2dd1b5a0e97d684ee0c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "73d4658999214b13adf2bfeab56c99f0",
+      "case_id": "text-umbrella",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 43.57184057123959,
+      "tool_calls": 6,
+      "review_sha256": "fdda393f237d6625bd28b5aea98b75cab63a683aa8a498105273d2f0c80a0b8d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "744622d35bd1456cb18e9c56e2e6f64e",
+      "case_id": "segment-person",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 47.74628688022494,
+      "tool_calls": 6,
+      "review_sha256": "f95a023b8adc71d3d475c2eaad551f7a17645134d23395d34265b97ad44e4884",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "75475c953f0c47e28b04823654d78e66",
+      "case_id": "depth-room",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 45.70344192907214,
+      "tool_calls": 7,
+      "review_sha256": "3a4c8b9177ad9d65ace4c5d5ab2b4aa8db65d38bc581425e90a06845fef7adde",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "781cd0ce904b465d9a375d43782644fb",
+      "case_id": "classify-zebra",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 50.09879711922258,
+      "tool_calls": 5,
+      "review_sha256": "baa01408406c42a596998473ed9862e45f10fc1ccd9aa747a22f15e20ef346cd",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "781f20914a294aaf93cfb59459f4d70a",
+      "case_id": "negative-distance",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 23.46204320527613,
+      "tool_calls": 3,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "7869a3e82d5b477fb1cbca117fe987cd",
+      "case_id": "segment-person",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 72.92447092570364,
+      "tool_calls": 8,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "78de088857bf4db891a75d2d84b5f85e",
+      "case_id": "segment-dog",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 50.20963397435844,
+      "tool_calls": 8,
+      "review_sha256": "b85824f8aa0f38d54a10b795943f613fab2954e17c6136023d7e58f5d69f41b5",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "7991ee5cc5694f55bc45d2caef179f20",
+      "case_id": "depth-forest",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 74.94918849412352,
+      "tool_calls": 8,
+      "review_sha256": "038f2f4ded4af60a23ef5c8a0d00319e9a6bc5803ec6e47e582305433cb50481",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "7c3b4d8ed45c458483bf254aafefbf3e",
+      "case_id": "semantic-outdoors",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 53.88824756350368,
+      "tool_calls": 6,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "7dc76a63ad02421abd6ec0ab02820e36",
+      "case_id": "negative-distance",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 23.58109354879707,
+      "tool_calls": 3,
+      "review_sha256": "75db7e046744c160c5d85808e3c4582a0a1b5e73ab40ebd28696f6d6ae525a49",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "7e96a90057734602a629fef0605fd55f",
+      "case_id": "followup-filter",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.27921180985868,
+      "tool_calls": 6,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "7feca6ead4de4218b56a8028820e74ac",
+      "case_id": "track-presence",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 117.94227613322437,
+      "tool_calls": 6,
+      "review_sha256": "146df7a6f29fe4d2036b031c95816121b77d5ad5c78e08c647cb388aec149835",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "80759e1559d346649b75b8469dc6f077",
+      "case_id": "text-umbrella",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 38.74658785946667,
+      "tool_calls": 5,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "809f07427a964581aaf6bd279d38195b",
+      "case_id": "followup-timeline",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 177.28184415306896,
+      "tool_calls": 7,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "84776c0115154838b8206b919897ec2c",
+      "case_id": "text-umbrella",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 52.818499783053994,
+      "tool_calls": 8,
+      "review_sha256": "5a769c466bc82795ea623952ab1bfb4abfb693e43806d2dd1b5a0e97d684ee0c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "84abbcefceaa446db96e8e87d72ba817",
+      "case_id": "semantic-outdoors",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 55.576193013228476,
+      "tool_calls": 9,
+      "review_sha256": "61dff1d8d9704193d9b6ae65969ccf4aa7aadccf6bddf3f88a663dcc8eb7b9b2",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "87eed088cb1b4e5392114b83b8703ae0",
+      "case_id": "detect-zebra",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 34.55274414550513,
+      "tool_calls": 5,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "88b785079ba046dd90f805c6dcd471e6",
+      "case_id": "segment-dog",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 54.0814196402207,
+      "tool_calls": 6,
+      "review_sha256": "8a5634a6b79f4322b3eea44e1a04a2187f92fa773f3c5f8410eacd4c110541b0",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "89f3ecd2d3154682904f8e5323bccaf7",
+      "case_id": "pose-photo",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 44.073630389757454,
+      "tool_calls": 6,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "8d7d49f9d1044a159cb17548659f688e",
+      "case_id": "segment-dog",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 46.81459503993392,
+      "tool_calls": 6,
+      "review_sha256": "13d66e323b47b3bc792bfde34d65fe00271cd4614d9711f891070cf2827946f4",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "8deb732f01434dd2b700ce2a0b10006c",
+      "case_id": "track-presence",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 121.38651377614588,
+      "tool_calls": 7,
+      "review_sha256": "f0781487fbfd4eb45cb7fed4168d03d895b12442d67e93cb900fe3b60de7fe4f",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9094977cffdd42cb9137393fe02f9a52",
+      "case_id": "negative-corrupt",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 25.470390901900828,
+      "tool_calls": 5,
+      "review_sha256": "6eee6cb25f62c4b18fba74597b246fab50fd24b7b2c8bd5e003f94ef458aa141",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "91816030becb434f826a86e487e718c6",
+      "case_id": "track-presence",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 92.03718940354884,
+      "tool_calls": 7,
+      "review_sha256": "f0781487fbfd4eb45cb7fed4168d03d895b12442d67e93cb900fe3b60de7fe4f",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "933ef185408e452e9674affa7a507cff",
+      "case_id": "obb-aerial-b",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 53.60647783521563,
+      "tool_calls": 6,
+      "review_sha256": "f9988875fe2205b7afaf3db8757da5250f4f1fd3bdd1a80db8a6f3b654b59699",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "95a42aa4810a4a258b068de9b7c61e1a",
+      "case_id": "depth-forest",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.3821014938876,
+      "tool_calls": 7,
+      "review_sha256": "a8f11d86f461a63d24cd00a47f74031d51a4a12c5e9a6c0a38f88b32974cffaa",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "974e488bd65049219ea12ffc267e096e",
+      "case_id": "negative-distance",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 24.37346743233502,
+      "tool_calls": 3,
+      "review_sha256": "2a1e3bb841733af805ed0ddf766106f22af328cf3873e30286566d9895601289",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9894b21d894340889acc6960bd770872",
+      "case_id": "depth-room",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 56.9434968912974,
+      "tool_calls": 5,
+      "review_sha256": "e9e7f21e5d879a6ad3d70477497a80a9560b91e1135afb39220f8bc830af3063",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "98eddb2f7cc2411a90e0d29d4775a0a7",
+      "case_id": "followup-filter",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 34.92670710850507,
+      "tool_calls": 5,
+      "review_sha256": "6ce55992dc5bcf7bc18d106f44686cf61a9b93baf68921ce95c2bfbd9af0bf85",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "99b346159898429185f020fb505b0dca",
+      "case_id": "obb-aerial-b",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 78.3521224502474,
+      "tool_calls": 10,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [
+        "selected_object_localization",
+        "rotated_overlay_and_source_geometry"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9a74d0e327264706a35cac95933384ae",
+      "case_id": "segment-person",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 85.13264667708427,
+      "tool_calls": 10,
+      "review_sha256": "b580f2d384c78dc4f0aa8b21509b4fe3cf6fd34134a3d5165da2ea6acf1fa0a5",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9c9440f91f564b0488f5a58d050d4181",
+      "case_id": "negative-distance",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 25.937419893220067,
+      "tool_calls": 3,
+      "review_sha256": "75db7e046744c160c5d85808e3c4582a0a1b5e73ab40ebd28696f6d6ae525a49",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9d40d196f98d4d51a0ba2222606ffd61",
+      "case_id": "obb-aerial-a",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 40.27674714382738,
+      "tool_calls": 6,
+      "review_sha256": "9b354e87beab9435480c62785f7a221940cfe922707b947b50b1bfae7e6ca7d1",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9de44beb0ec54f9e86c1be959d5c6344",
+      "case_id": "classify-dog",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.083600419573486,
+      "tool_calls": 7,
+      "review_sha256": "4c69d0196b8aba7163fa2b4e5c1d4edc30c299b70f8cbe4a8ed974fc5b6dc644",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "9ea48a5da59b4202a05bd475703ee476",
+      "case_id": "track-workout",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 118.89333619084209,
+      "tool_calls": 11,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a0670ccf18b8450d8c3796df2ed94d5f",
+      "case_id": "detect-giraffes",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.05248572956771,
+      "tool_calls": 6,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a2e38c1063f64dbf91f4af7fa018eed3",
+      "case_id": "track-workout",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 168.84632689785212,
+      "tool_calls": 9,
+      "review_sha256": "2312d27e491d0e5b1d7e807dfcd8ebfb3bbe3a6f57c2f14d221c3ca2bf6d2510",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a4421c9434814db091d0c7fb7948c998",
+      "case_id": "classify-zebra",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 45.09065689984709,
+      "tool_calls": 6,
+      "review_sha256": "3166f4138a70c000f1ef4b2e7b8509421a2bdba1106f32f465134b47040244fe",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a5626e9ae6c643409666e3c84a5a822e",
+      "case_id": "track-workout",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 126.86674291361123,
+      "tool_calls": 11,
+      "review_sha256": "3d14234e0d6e0888122c886eaeb477d1482380337724651bde8a517b471e4706",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a58b1943a6754f2c9bc8ab0a3cb3c004",
+      "case_id": "followup-filter",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.75755274668336,
+      "tool_calls": 4,
+      "review_sha256": "4563d1d02255bcc69aec1ff1eab2055841a090128312dd7c1f721ef6b3f84cb5",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "a7d45626f3ed4c9f8c1d67daf2f86675",
+      "case_id": "pose-photo",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 64.01640316937119,
+      "tool_calls": 7,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a800d87daa304731bb770d3822e49f70",
+      "case_id": "negative-corrupt",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 15.385012024082243,
+      "tool_calls": 3,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "a8385bfe74214623a3cf5ee1b722adc0",
+      "case_id": "track-workout",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 133.83561368472874,
+      "tool_calls": 8,
+      "review_sha256": "a0c9be9227ed9c4c7f51dcca65b8c4457f34bfa088ce16043ac600be12b510a3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "ab197e993ad04e9c844f3e9bbdd03e0c",
+      "case_id": "obb-aerial-a",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 43.66574390884489,
+      "tool_calls": 6,
+      "review_sha256": "f9988875fe2205b7afaf3db8757da5250f4f1fd3bdd1a80db8a6f3b654b59699",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "ac29cfaed6434efa99a683fcc1da3b17",
+      "case_id": "obb-aerial-a",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 46.56328344065696,
+      "tool_calls": 6,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "aca76c356a764b38b7bc6adfd127a454",
+      "case_id": "negative-missing",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 3.584861410781741,
+      "tool_calls": 0,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "ae1584f14b0d4247a674d6ea3e507521",
+      "case_id": "followup-filter",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 46.951179754920304,
+      "tool_calls": 6,
+      "review_sha256": "6ce55992dc5bcf7bc18d106f44686cf61a9b93baf68921ce95c2bfbd9af0bf85",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "ae8d7e4048d347a0a076016a8289120b",
+      "case_id": "followup-timeline",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 200.93310336675495,
+      "tool_calls": 9,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "af4b26e4659e4c748dec99d305fce3a3",
+      "case_id": "text-umbrella",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 41.55387800652534,
+      "tool_calls": 6,
+      "review_sha256": "fdda393f237d6625bd28b5aea98b75cab63a683aa8a498105273d2f0c80a0b8d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b145b310ec674d8fa9cc3d3954b24d5a",
+      "case_id": "pose-photo",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 58.03627818543464,
+      "tool_calls": 7,
+      "review_sha256": "2d4bab76e80969763534e6fad2813c9f9a9168688b1dde06a79a26ca473896f1",
+      "failed_checks": [
+        "skeleton_overlay"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b29342bb7ca14b1aa88cf83eacc478e5",
+      "case_id": "negative-recovery",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 26.43947954196483,
+      "tool_calls": 4,
+      "review_sha256": "29f2b37d27c8e249c6197c8883fb30400aa1a64083d132e0b2e012867c25d936",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b31bd49552874e1ca87dfbf5bb1b26de",
+      "case_id": "obb-aerial-a",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 47.986016252078116,
+      "tool_calls": 6,
+      "review_sha256": "f9988875fe2205b7afaf3db8757da5250f4f1fd3bdd1a80db8a6f3b654b59699",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b39210fd8c1a4f17bed4f5d011add047",
+      "case_id": "detect-giraffes",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 53.805993921123445,
+      "tool_calls": 6,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b5a1d444c89b475181ed75e2904a1571",
+      "case_id": "negative-recovery",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 15.17785962484777,
+      "tool_calls": 1,
+      "review_sha256": "75db7e046744c160c5d85808e3c4582a0a1b5e73ab40ebd28696f6d6ae525a49",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b72f90accf40406c8ca3c1bc78839eee",
+      "case_id": "semantic-field",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 70.16534672211856,
+      "tool_calls": 7,
+      "review_sha256": "7c896ffd4dbb103823cd9c536b4240d80887f8c3eb7b4f61fc623502761e0ede",
+      "failed_checks": [
+        "direct_integer_map_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "b812dcb91c2a4249babfd316c563ab1e",
+      "case_id": "obb-aerial-b",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 38.86809803266078,
+      "tool_calls": 6,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "bb3635dc54bd4589899151b44441caf4",
+      "case_id": "depth-forest",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 44.988465200178325,
+      "tool_calls": 6,
+      "review_sha256": "3a4c8b9177ad9d65ace4c5d5ab2b4aa8db65d38bc581425e90a06845fef7adde",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "bb49db20a55c42258b3e4ce47775c87a",
+      "case_id": "followup-timeline",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 189.00588622596115,
+      "tool_calls": 6,
+      "review_sha256": "d392afccf167a6f042ab231fa7516bb526ad77376b61405ba772d06f89bbd337",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "bcf5f49819bb48f4810ea675b650c7cd",
+      "case_id": "pose-workout",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 126.15793418046087,
+      "tool_calls": 6,
+      "review_sha256": "2fb6123515692dd738515ea94b494951a14ee7912395a6eb652ae7412c849bec",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "be60333bac1142b7bd2aaa35c9e12bad",
+      "case_id": "negative-corrupt",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 15.530816652812064,
+      "tool_calls": 3,
+      "review_sha256": "6eee6cb25f62c4b18fba74597b246fab50fd24b7b2c8bd5e003f94ef458aa141",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "bfde218334814a14a2fccdbed118e4f4",
+      "case_id": "classify-dog",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 32.56796417478472,
+      "tool_calls": 5,
+      "review_sha256": "5646acbaae71d3dda5a778e269f16898449029cdb1378d3548981c46c2e8f2b2",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c02295ca14a844ff9f921b5328bb8ca9",
+      "case_id": "text-umbrella",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 34.024697329849005,
+      "tool_calls": 5,
+      "review_sha256": "b54d569fc15215a08a57ac5fbdaa1797dc857f5405f07a1bf472b14eca0edfe6",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c0b8f86fd38c43729fe2f5813afd4bb0",
+      "case_id": "followup-filter",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 41.396848514676094,
+      "tool_calls": 5,
+      "review_sha256": "6ce55992dc5bcf7bc18d106f44686cf61a9b93baf68921ce95c2bfbd9af0bf85",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "c132f393130646e68b3444891ee78861",
+      "case_id": "pose-photo",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 53.09912213217467,
+      "tool_calls": 6,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c271141a60084aa9a2d114c92beb99af",
+      "case_id": "negative-missing",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 7.39226536359638,
+      "tool_calls": 0,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c28cb7ace2734fe885339502aab08e98",
+      "case_id": "depth-room",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 70.16354207787663,
+      "tool_calls": 7,
+      "review_sha256": "02b11bab38a13de0e537aee13dc8683c54ec8a87edf95dd1adf8e9f97dea6d02",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c55627bfc3e3400b875d5bd5cf610342",
+      "case_id": "segment-person",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 68.65489568002522,
+      "tool_calls": 8,
+      "review_sha256": "321fb286597f11eb37b2e60e624cb7abe63d888aec22d76e74da933c5b0d27e3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c727611cf6174ca39c45fdff326c7aea",
+      "case_id": "text-umbrella",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 46.05483135022223,
+      "tool_calls": 6,
+      "review_sha256": "5a769c466bc82795ea623952ab1bfb4abfb693e43806d2dd1b5a0e97d684ee0c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "c79f337ff17741ca8a863ccb5c798bdd",
+      "case_id": "followup-timeline",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 129.29507100209594,
+      "tool_calls": 11,
+      "review_sha256": "65e2042fdf79408e48bc0f48cf60dcdcf842d6f7c25bebe0d761b7d332b97673",
+      "failed_checks": [],
+      "turns_completed": [
+        true,
+        true
+      ]
+    },
+    {
+      "review_id": "c8966f2236e34ff6893dd1bec2591270",
+      "case_id": "semantic-field",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 56.25740472972393,
+      "tool_calls": 6,
+      "review_sha256": "038f2f4ded4af60a23ef5c8a0d00319e9a6bc5803ec6e47e582305433cb50481",
+      "failed_checks": [
+        "required_integer_map_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "cb28793eb81d4975af7d3be998b282c7",
+      "case_id": "detect-zebra",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 32.74844995792955,
+      "tool_calls": 4,
+      "review_sha256": "321fb286597f11eb37b2e60e624cb7abe63d888aec22d76e74da933c5b0d27e3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "cc1f7e8c662d4f1da30ca3bcce25e2dd",
+      "case_id": "classify-dog",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 35.93997343722731,
+      "tool_calls": 5,
+      "review_sha256": "baa01408406c42a596998473ed9862e45f10fc1ccd9aa747a22f15e20ef346cd",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "cd88de4fe2c7475cb3200362b2d77a7c",
+      "case_id": "text-vase",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 68.29032433498651,
+      "tool_calls": 6,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d038bdf211404a45b90ff07da6719f6e",
+      "case_id": "depth-room",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 71.88139708712697,
+      "tool_calls": 8,
+      "review_sha256": "e9e7f21e5d879a6ad3d70477497a80a9560b91e1135afb39220f8bc830af3063",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d13edae22ee24281baabee245ae656cc",
+      "case_id": "segment-dog",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 48.5409667249769,
+      "tool_calls": 8,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d4a929f00c1e44518e96b05f77c13c59",
+      "case_id": "negative-recovery",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 26.52377055492252,
+      "tool_calls": 4,
+      "review_sha256": "75db7e046744c160c5d85808e3c4582a0a1b5e73ab40ebd28696f6d6ae525a49",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d4c4fbb2f8e94edab640b8caa75913d0",
+      "case_id": "track-workout",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 134.1094143325463,
+      "tool_calls": 9,
+      "review_sha256": "24d75e8db6e0491af4cf8dc1a1bc6e2dd8f0fe5f282981fae03f47875b567056",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d6b0a18d044643979d71c22a97df1cf8",
+      "case_id": "negative-recovery",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 59.72341097611934,
+      "tool_calls": 6,
+      "review_sha256": "29f2b37d27c8e249c6197c8883fb30400aa1a64083d132e0b2e012867c25d936",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d7709cb5586a42d091153538c870e31b",
+      "case_id": "negative-missing",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 9.50286780949682,
+      "tool_calls": 2,
+      "review_sha256": "d392afccf167a6f042ab231fa7516bb526ad77376b61405ba772d06f89bbd337",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d791f0fc75f04815ae760ad86cfa4e4d",
+      "case_id": "detect-giraffes",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 48.45789177902043,
+      "tool_calls": 7,
+      "review_sha256": "3281b92a1f1a5ddbe00d491fe28a24b0eae752618789624a37df99b36671f58d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d8133d38c7e84373916153c32467aa1a",
+      "case_id": "negative-recovery",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 27.20910372119397,
+      "tool_calls": 6,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d837f7aa338b447ea356633a20b88c79",
+      "case_id": "track-presence",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 97.41729748807847,
+      "tool_calls": 8,
+      "review_sha256": "2a3bffaa43d54cb6f55ac56503cc6a25e97049f6b5d7e1da9d46f2e0b3e185ce",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d8e24a0d0bf24d4d9edd1f4d2f55949f",
+      "case_id": "obb-aerial-a",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 43.78208380471915,
+      "tool_calls": 6,
+      "review_sha256": "9b354e87beab9435480c62785f7a221940cfe922707b947b50b1bfae7e6ca7d1",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "d9fa054509c74814a1e0ce153b5934f3",
+      "case_id": "depth-room",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 80.41534150205553,
+      "tool_calls": 8,
+      "review_sha256": "501a7ad3e39a05aa83887b64c7a6a4414c2ca90ebf79da47d9fe25e4b1c9c481",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "da23fb15a6d8488f9860d76a68747826",
+      "case_id": "text-vase",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 50.844739080406725,
+      "tool_calls": 6,
+      "review_sha256": "4563d1d02255bcc69aec1ff1eab2055841a090128312dd7c1f721ef6b3f84cb5",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "da53e4a8fc7c470b9f4caf7c4ba57928",
+      "case_id": "detect-giraffes",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 52.40359455905855,
+      "tool_calls": 6,
+      "review_sha256": "6fd7134abb031d7c8fd9efe4564f984b20950fbbee2b7b470492443ca7cbb485",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "db2000bab7e8477ab342076408081156",
+      "case_id": "segment-dog",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 79.45904235821217,
+      "tool_calls": 10,
+      "review_sha256": "5ad47c3874973c2fc3ca388d2c41dcc3def28900005ed0200261b1dc480b56b7",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "db20ccaec1704047a6428b0dcd8a3994",
+      "case_id": "negative-missing",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 3.8563347049057484,
+      "tool_calls": 0,
+      "review_sha256": "6eee6cb25f62c4b18fba74597b246fab50fd24b7b2c8bd5e003f94ef458aa141",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "dbf5ec50a26a45aeaf4c1875766824df",
+      "case_id": "negative-recovery",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 19.215160767547786,
+      "tool_calls": 2,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "dc304fa0fd9d4529a2e973cae2bca3e2",
+      "case_id": "semantic-field",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 62.20495985168964,
+      "tool_calls": 6,
+      "review_sha256": "c2928da2c7c0204fd429c7d91986026b00136a7a0063f2b388e831f2a6754a94",
+      "failed_checks": [
+        "required_integer_map_direct_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "dd26493f65b04ee59a253112687c356c",
+      "case_id": "depth-room",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 41.37614479288459,
+      "tool_calls": 6,
+      "review_sha256": "1a4ba1af1f56b6dedde1983190a9afeb9c5ba3699a3564542691a33b2c208fcd",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e06aa9e6696141edbbce38b2afd03c13",
+      "case_id": "pose-photo",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 68.60993740428239,
+      "tool_calls": 7,
+      "review_sha256": "2d4bab76e80969763534e6fad2813c9f9a9168688b1dde06a79a26ca473896f1",
+      "failed_checks": [
+        "skeleton_overlay"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e2333452b28f4920b183d9eaa3a20e38",
+      "case_id": "classify-zebra",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 37.3267954448238,
+      "tool_calls": 5,
+      "review_sha256": "baa01408406c42a596998473ed9862e45f10fc1ccd9aa747a22f15e20ef346cd",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e248152b32aa41018748a82709766fa3",
+      "case_id": "classify-dog",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.597393485717475,
+      "tool_calls": 5,
+      "review_sha256": "659b42e7b3bf2f76966fefb8a9b53e12f012c9c7a4bb4d5cd87a5a01f7ac8099",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e2bf2a6c4c204b58a90f5cc811f16c87",
+      "case_id": "obb-aerial-a",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 44.42509770207107,
+      "tool_calls": 5,
+      "review_sha256": "03d270389722d87a86e5df7a848ade750817cafdb76d07d82feb6acba371bbed",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e2e297b768de4846b7498f6f90e1069b",
+      "case_id": "depth-forest",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 58.10914584528655,
+      "tool_calls": 5,
+      "review_sha256": "adeb9726f912c4244891bf0b7305f65432a5c2e920d5bb43149ae3574a7e4dc0",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e3a84c2fb1254e17b72235665de19d2e",
+      "case_id": "semantic-field",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 54.05590561404824,
+      "tool_calls": 7,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e4b08973eb5c4db3807e84f91e6b627c",
+      "case_id": "negative-corrupt",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 14.871318732388318,
+      "tool_calls": 3,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e5ff6b6d5037432a8a0d2a7191d833ca",
+      "case_id": "text-umbrella",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 55.18646328151226,
+      "tool_calls": 8,
+      "review_sha256": "3b8d679c51b30253d671555bfafa072416b692bfae07a4e03b51996e8289e743",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e6813e1a7c974ba6b91149629c4ee95e",
+      "case_id": "obb-aerial-a",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 44.73849112261087,
+      "tool_calls": 6,
+      "review_sha256": "da1f1a85e67823cd8646230873dbacec961a959763af05ebea528fec6fe5e857",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e6ac798f30584e2399a3a5861339750a",
+      "case_id": "detect-zebra",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 36.885689148679376,
+      "tool_calls": 5,
+      "review_sha256": "69c4c4e6cb6693dc3c8bfdd009bb9e7e93f01f07367b220bb61ec3f8d393bc8c",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "e781afb202fe4dee8690247c31e7659f",
+      "case_id": "track-workout",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 124.69470902904868,
+      "tool_calls": 11,
+      "review_sha256": "29060b43eb373be57263b84e74a0fd7605c70271fb4bd3fdafafe06f7d4a79d7",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "ea9fe3f7bd6348759c8a628a7e89841f",
+      "case_id": "semantic-outdoors",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 51.92547138314694,
+      "tool_calls": 7,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "eb1e186af1174f219740c8f88aba9b2f",
+      "case_id": "semantic-outdoors",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 59.9142087623477,
+      "tool_calls": 6,
+      "review_sha256": "3acd6828278c7fdda1599544d183fd1b3aebc2b480ae4831b61b73f5d989c16d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "eba2e5ad8fb4402d928edf6c5f4ecced",
+      "case_id": "segment-dog",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 50.11949151661247,
+      "tool_calls": 6,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "ecfb7d2773c744f99278328dee27a728",
+      "case_id": "classify-zebra",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 31.77942984737456,
+      "tool_calls": 5,
+      "review_sha256": "2e32f4179cfd74069396e159338a90ff57f9a819171d3ee47f5369b6e0382f69",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f03a06ba053c4670b75250d28c7692af",
+      "case_id": "classify-dog",
+      "repeat": 0,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 30.24393619503826,
+      "tool_calls": 5,
+      "review_sha256": "4c69d0196b8aba7163fa2b4e5c1d4edc30c299b70f8cbe4a8ed974fc5b6dc644",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f1e0375c1eb145bf94aa4c6552d3436d",
+      "case_id": "detect-giraffes",
+      "repeat": 1,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 34.33244949299842,
+      "tool_calls": 5,
+      "review_sha256": "3281b92a1f1a5ddbe00d491fe28a24b0eae752618789624a37df99b36671f58d",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f38df204b1544bf6ba13c1351e15c7d7",
+      "case_id": "semantic-outdoors",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 74.16507492214441,
+      "tool_calls": 7,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f3e18928dc1d414a848963ce85ee2bdc",
+      "case_id": "segment-person",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "fail",
+      "elapsed_seconds": 47.04294062405825,
+      "tool_calls": 7,
+      "review_sha256": "f95a023b8adc71d3d475c2eaad551f7a17645134d23395d34265b97ad44e4884",
+      "failed_checks": [
+        "direct_requested_delivery"
+      ],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f74448b52c1b41029450c50ae79fa654",
+      "case_id": "segment-person",
+      "repeat": 0,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 109.32426908425987,
+      "tool_calls": 15,
+      "review_sha256": "1255fa5c55dfec509e0bd55ad9aa40dbabc681b46819d19b2cb934411611e6b8",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f868dcdfdc6a4dc6a4bf92140842c145",
+      "case_id": "depth-forest",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 84.58783623576164,
+      "tool_calls": 9,
+      "review_sha256": "1a4ba1af1f56b6dedde1983190a9afeb9c5ba3699a3564542691a33b2c208fcd",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f918a8cfb8d34164aa2bb0e93bd4be9f",
+      "case_id": "depth-forest",
+      "repeat": 1,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 46.30361573398113,
+      "tool_calls": 6,
+      "review_sha256": "2f7c7ab091e50355ad0361b990773644bd8350f082478c578bb9038f47755e19",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "f9d88954b49d4b2fa9002d35e781508f",
+      "case_id": "negative-missing",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 5.0105547634884715,
+      "tool_calls": 0,
+      "review_sha256": "7c427d66696f094c04d2e8d965b337b33be23b147ce87fb9c042b205217d7cd3",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "fa114fe0b1474507998bdae83cf115ba",
+      "case_id": "semantic-field",
+      "repeat": 2,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 60.25123003125191,
+      "tool_calls": 6,
+      "review_sha256": "7dbded5cdcb0ff2505c2cfb2088244926848e2f3855e7a68fa801302e0eeeebe",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "fc3900ed84914ddf854d08a84872591e",
+      "case_id": "depth-forest",
+      "repeat": 2,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 90.47170982509851,
+      "tool_calls": 10,
+      "review_sha256": "a436c85040e49b9aadf3f652d143d7d11304b0057995b6c53b5caa409f25345b",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "fc77f9ab5c504733856a7669fb2df5cc",
+      "case_id": "track-workout",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 127.487618714571,
+      "tool_calls": 6,
+      "review_sha256": "2312d27e491d0e5b1d7e807dfcd8ebfb3bbe3a6f57c2f14d221c3ca2bf6d2510",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "fda791510e3e462b8be564ab472657e3",
+      "case_id": "depth-forest",
+      "repeat": 0,
+      "arm": "skill",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 52.289575792849064,
+      "tool_calls": 6,
+      "review_sha256": "3a4c8b9177ad9d65ace4c5d5ab2b4aa8db65d38bc581425e90a06845fef7adde",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "fdec7ee3a8074f779101f8df5b1e6165",
+      "case_id": "depth-room",
+      "repeat": 2,
+      "arm": "plugin",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 42.095499319024384,
+      "tool_calls": 6,
+      "review_sha256": "3166f4138a70c000f1ef4b2e7b8509421a2bdba1106f32f465134b47040244fe",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    },
+    {
+      "review_id": "ff4d370a947545d0a385c2b149f8599e",
+      "case_id": "negative-missing",
+      "repeat": 1,
+      "arm": "stock",
+      "execution_status": "finished",
+      "grade": "pass",
+      "elapsed_seconds": 4.307512970641255,
+      "tool_calls": 0,
+      "review_sha256": "77a82a82703f79e9e013f1ce44fcc53b6cdedf29742b5a3534f5969a7dd57c44",
+      "failed_checks": [],
+      "turns_completed": [
+        true
+      ]
+    }
+  ],
+  "review_errata": [
+    {
+      "id": "batch22-source-dimensions-prose",
+      "original_review_sha256": "2a1e3bb841733af805ed0ddf766106f22af328cf3873e30286566d9895601289",
+      "review_ids": [
+        "1ff3f756af664cdf945fdb470e43b825",
+        "3899329a560444cca868c7034763004a",
+        "974e488bd65049219ea12ffc267e096e"
+      ],
+      "original_prose": "original 640x480 photo",
+      "corrected_prose": "original 640x488 photo",
+      "effect": "Only a prose dimension typo. The original report already stores correct numeric dimensions. No task grade, evidence value, threshold, performance count or aggregate result is changed.",
+      "source_sha256": "6460e4a7cc80e34815aba8910a23152a16a24a416fa598138bd9231cccd413e2",
+      "source_size_wh": [
+        640,
+        488
+      ]
+    }
+  ],
+  "scope": [
+    "Prepared CPU runtime and initially warmed default weights; agent-selected extra model downloads remain timed. Both guides preloaded; setup and agent construction excluded.",
+    "Timing includes discovery, requested handoff manifest, verification and final/follow-up responses; not Telegram receipt.",
+    "Plugin skill is also reloadable through native discovery; baseline guide is preloaded only.",
+    "Common manifest instrumentation may have unequal costs. No estimated overhead was subtracted.",
+    "Shared scenes and repeats are not independent; no statistical significance claim.",
+    "AI-assisted artifact grading with independent numeric checks; formats can reveal implementations.",
+    "During batch42, embedded metadata exposed an elapsed_seconds field. The reviewer disclosed the incidental exposure and did not use it for artifact grading; no guaranteed timing blinding is claimed.",
+    "Frozen required-file and skeleton-edge criteria are stricter than some brief natural-language prompts; failed checks are reported separately from numerical accuracy.",
+    "Corrupt-input coverage uses one 60-byte plain-text file disguised as JPEG, not a broad set of real damaged media.",
+    "Requested provider/model fixed; observed turn fields are reported separately and do not cryptographically pin a managed backend.",
+    "Later candidate fixes and targeted replays are separate; these original grades are immutable.",
+    "The study stopped after 118 completed attempts at its disk guard, following two auxiliary preflights that created disposable Hermes environments. These were removed; an administrative harness revision permits already-downloaded additional weights while verifying all initial weights and other study identity fields. Completed runs were retained without rerunning."
+  ],
+  "resource_interruption": {
+    "event": "Two native isolated preflights unexpectedly created temporary Hermes managed environments/cache while original study was running, then disk guard stopped after118 completed attempts.",
+    "conservative_overlap_window": {
+      "from": 1794611379.755192,
+      "to": 1794611531.1668963,
+      "basis": "Preparation config mtime through completed preflight record mtime; actual bootstrap starts later. Result mtime minus reported elapsed approximates conversation start."
+    },
+    "potentially_affected_completed_runs": [
+      {
+        "review_id": "a5626e9ae6c643409666e3c84a5a822e",
+        "approximate_end_at": 1794611395.5045614,
+        "elapsed_seconds": 126.86674291361123
+      },
+      {
+        "review_id": "0551574943034f1dbebd68798009d057",
+        "approximate_end_at": 1794611548.4646494,
+        "elapsed_seconds": 139.8883694978431
+      }
+    ],
+    "interpretation": "Preserve all original times and grades. Disclose resource contention and the interruption; report sensitivity of paired latency comparisons to excluding these pairs, never silently replace observations.",
+    "latency_sensitivity_policy": {
+      "recorded_at": 1794611766.5748532,
+      "timing": "Recorded before final whole-study aggregation, after root knew partial artifact grades and two overlapped run IDs.",
+      "rule": "Keep the original benchmark gate unchanged. Also report median and summed paired latency ratios with whole overlapped case/repeat pairs excluded. A speed-based publication claim requires both original and sensitivity ratios <=0.75; otherwise report sensitivity and unresolved speed evidence. This adds an evidence-integrity check, not a replacement or relaxed original threshold."
+    }
+  },
+  "latency_sensitivity": {
+    "scope": "Post-incident sensitivity excluding entire case/repeat pairs that overlap the disposable runtime setup. Original results, grades, times and predefined gate are unchanged.",
+    "excluded_case_repeats": [
+      {
+        "case_id": "track-presence",
+        "repeat": 1
+      },
+      {
+        "case_id": "track-workout",
+        "repeat": 1
+      }
+    ],
+    "remaining_successful_pairs": 62,
+    "median_paired_latency_ratio": 0.8804650178546691,
+    "summed_paired_latency_ratio": 0.8805617852383999
+  },
+  "administrative_resume": [
+    {
+      "reason": "Resume after disk guard; retain agent-selected additional model weights without rewriting initial inventory",
+      "started_at": 1794611850.4459677,
+      "original_study_sha256": "33c2d56e8f2d1bfeeeb5f65201c85f5aa4567cb63abe01c74f788e9ca9bc701f",
+      "administrative_harness_sha256": "49b4d90db8361664718be06345cc00c20869d8af5f151284776e3661b3702205",
+      "current_weights": {
+        "._mobileclip2_b.ts": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n-cls.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n-depth.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n-obb.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n-pose.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n-seg.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n-sem-ade20k.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yolo26n.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "._yoloe-26s-seg.pt": "35d9141e25261bb55c5e2eefe3483837bfc7229dcecc395bd9030bf17ee95c6b",
+        "mobileclip2_b.ts": "35d7f213e4d75f38514e4656ad3cb91158bd33e3805d8ac349f23b186f66982f",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "yolo26n-cls.pt": "0dd6f8dbc448870ac98a3cbb7156f923f7ce21fed3755d4019169ffffd279e81",
+        "yolo26n-depth.pt": "befed1b8561d8b2eaa66274b070cdfc9c44853bda6d6d62a04759f9383af74e9",
+        "yolo26n-obb.pt": "6f51c78197aacda4a33be77294065a9001675fb893f56227a179731b53dbd2b0",
+        "yolo26n-pose.pt": "eb3bb8268828aeaf515cec23a4bfafd793944a86fe9af94ba7823609c14522a9",
+        "yolo26n-seg.pt": "361fbfabab285c3237700b6bb91d7ecfa602cd945fffda8dbe1242829b71e73f",
+        "yolo26n-sem-ade20k.pt": "68ac71bef2868c987fff7cd7c49cb656922f6d8447ad21af3893305577435000",
+        "yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+        "yoloe-26s-seg.pt": "48f24206bc8680d60cbbfa296b0140da849669b9515058b72f5a945142df0654"
+      },
+      "extra_weights": {
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+      },
+      "existing_completed": 118,
+      "scope": "Only the resume identity check differs. Worker prompts, budgets, ordering and grading inputs are unchanged; original study.json and plugin source remain immutable."
+    }
+  ],
+  "administrative_harness_patch": "--- a/evals/run.py\n+++ b/evals/run.py\n@@ -263,9 +263,24 @@\n     }\n     study_path = opts.output / \"study.json\"\n     if study_path.exists():\n-        assert json.loads(study_path.read_text()) == study, (\n+        frozen = json.loads(study_path.read_text())\n+        assert {**study, \"weights\": frozen[\"weights\"]} == frozen, (\n             \"Study identity changed; use a new output directory\"\n         )\n+        assert all(study[\"weights\"].get(name) == digest for name, digest in frozen[\"weights\"].items()), (\n+            \"An initially frozen model was removed or changed\"\n+        )\n+        resume_record = {\n+            \"reason\": \"Resume after disk guard; retain agent-selected additional model weights without rewriting initial inventory\",\n+            \"started_at\": time.time(),\n+            \"original_study_sha256\": hashlib.sha256(study_path.read_bytes()).hexdigest(),\n+            \"administrative_harness_sha256\": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),\n+            \"current_weights\": study[\"weights\"],\n+            \"extra_weights\": {name: digest for name, digest in study[\"weights\"].items() if name not in frozen[\"weights\"]},\n+            \"existing_completed\": len(list(opts.output.glob(\"*/result.json\"))),\n+            \"scope\": \"Only the resume identity check differs. Worker prompts, budgets, ordering and grading inputs are unchanged; original study.json and plugin source remain immutable.\",\n+        }\n+        write(opts.output / (\"resume-\" + uuid.uuid4().hex + \".json\"), resume_record)\n     else:\n         write(study_path, study)\n     mapping_path = opts.output / \"runs.json\"\n",
+  "provider_rejection_observations": [
+    {
+      "recorded_at": 1794613854.3753989,
+      "review_id": "2dfe2a7dd7614bf0a3e22f7e4df97389",
+      "trace_sha256": "6596e7c1c98002791a7ffc4a236a9c8b0b780f263986470c8a37377e12be7e27",
+      "inference_status": "completed",
+      "artifacts": [
+        {
+          "kind": "annotated",
+          "exists": true,
+          "sha256": "5c0b3a4802c11344c2f1d648eaeaa334378f46ab2a94d503de25c6018f975806"
+        },
+        {
+          "kind": "observations",
+          "exists": true,
+          "sha256": "419481ffc433a58000264535ae56af68dcaaed17c2b68b7cc80b0957f8fc034a"
+        },
+        {
+          "kind": "metadata",
+          "exists": true,
+          "sha256": "60198b12c96c0aeebda31d3e37c1eee2681dbb9dbc8ec2f81789cb8c04c691a5"
+        },
+        {
+          "kind": "data",
+          "exists": true,
+          "sha256": "3bd2e36de7cd828983ac0f7c5a10cd952e80b0dcdf92aced3a5f813862d6da71"
+        }
+      ],
+      "conversation_completed": false,
+      "error": "Final model request rejected with HTTP400 {detail: Bad Request}; no specific cause supplied.",
+      "scope": "Inference success and saved artifacts do not establish conversation completion or delivery. Preserve original failed attempt and grade; no retry, provider switch or source change. Cause unresolved; cannot attribute malformed request to plugin from this response."
+    }
+  ]
+}

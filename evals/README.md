@@ -1,6 +1,6 @@
 # Conversation evaluation protocol
 
-Status: protocol, not a claim of measured usefulness. Freeze cases and artifact hashes before held-out runs. Development cases may guide fixes; held-out failures remain failures for that frozen version.
+Status: the original 216-run study is complete and missed the predefined comparative release target. Its frozen protocol and failures remain unchanged. Later corrections are evaluated separately; they do not replace the original result.
 
 The comparison uses the same Hermes version, existing model account, reasoning setting, CPU, media, model weights, and installed dependencies in three arms:
 
@@ -20,11 +20,19 @@ Success requires the requested operation, valid and relevant artifacts, the case
 
 The 24 conversations are descriptive comparison units, not independent images: several reuse a scene or derived frame. Repeats do not create 72 independent cases, and no inferential significance claim is made. Report paired completion, elapsed time including failures, tool calls, invalid artifacts, per-task results, and p50/p95 latency. Speed comparisons use paired valid completions and show excluded pairs. Engineering release targets are at least 90% completion and either 15 percentage points more completion than the skill baseline or 25% less paired latency with no more than five percentage points less completion. These thresholds are not a statistical noninferiority claim.
 
-| Arm | Completed / 72 | Valid artifacts | p50 / p95 | Tool calls | Verdict |
-| --- | --- | --- | --- | --- | --- |
-| Stock | Pending | Pending | Pending | Pending | Unmeasured |
-| Strong skill | Pending | Pending | Pending | Pending | Unmeasured |
-| Plugin + skill | Pending | Pending | Pending | Pending | Unmeasured |
+| Arm | Passed conversations / 72 | All-attempted latency p50 / p95 | Total tool calls |
+| --- | --- | --- | --- |
+| Stock | 65 (90.3%) | 51.95 / 192.24 s | 462 |
+| Strong skill | 68 (94.4%) | 49.28 / 147.98 s | 394 |
+| Plugin + skill | 66 (91.7%) | 41.74 / 129.62 s | 468 |
+
+These are the [original results](results/heldout-v1.json) for candidate `952d6077`, graded with the unchanged rubric using AI-assisted artifact review and independent numerical checks. All 216 attempts are included. On the 64 case/repeat pairs where both plugin and strong skill passed, the median per-pair latency ratio was **0.8805** and the summed-time ratio **0.8761**: about 12% less time, below the required 25% reduction. Plugin completion was 2.8 percentage points lower, not the required 15-point improvement. The predefined gate therefore **failed** despite exceeding 90% completion.
+
+The plugin's six failures were three missing outline deliveries, two missing connecting skeleton overlays, and one provider rejection before final delivery after successful inference. The strong skill had four failures; stock had seven. Per-case outcomes, failed checks, all-attempted latencies, paired exclusions, source/runtime hashes and provider-field limits are included in the JSON report.
+
+The study stopped after 118 attempts at its disk guard following auxiliary environment setup, then resumed without rerunning completed cases. The report preserves the administrative harness patch and a sensitivity analysis excluding the two potentially affected case/repeat pairs: 62 valid pairs remain, with median/summed ratios **0.8805 / 0.8806**. Neither analysis meets the speed target. This was a prepared-runtime, preloaded-guide comparison; installation and actual Telegram receipt are outside its timer, and common artifact-manifest instrumentation may impose unequal overhead.
+
+[Separate correction checks](results/corrections-06ff6b4.json) for `06ff6b4` passed **15/15** previously seen image/follow-up cases under the same rubric. Six synthetic late-completion replays produced repeated file references in all three original-guide runs and none in the three corrected-guide runs. Five Linux media checks also passed. These results do not change the original benchmark gate, demonstrate general workout-counting accuracy, or establish exactly-once Telegram delivery. Further temporal-analysis regressions and real-channel acceptance remain pending.
 
 Stop on provider quota/credential failure and report incomplete coverage. Never switch providers or silently remove failed cases to obtain a passing result.
 
