@@ -22,7 +22,7 @@ Use the `yolo_vision` tools for measured visual observations and reusable artifa
 - Daily life: locate named belongings with YOLOE, produce cutouts, organize images, or summarize scene coverage. Use Hermes's existing vision for broader scene interpretation when YOLO outputs cannot answer it.
 - Business: produce object locations, footage observations, segmentation assets, and track tables. Counts of observations or track IDs are not a guaranteed inventory, occupancy, or unique-customer total.
 
-Read the full JSONL timeline using Hermes's file/terminal tools whenever the compact preview cannot support the requested conclusion. The timeline is in the data ZIP and local observations artifact. Never infer an entire clip from its first-frame preview.
+Read the full JSONL timeline using Hermes's file/terminal tools whenever the compact preview cannot support the requested conclusion. The timeline is in the data ZIP and local observations artifact. Never infer an entire clip from its first-frame preview. When making video contact sheets or crops, decode incrementally and retain only the selected frames; do not load every decoded frame into memory.
 
 ## Counts over time
 
