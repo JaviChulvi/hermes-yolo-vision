@@ -18,8 +18,18 @@ Use the `yolo_vision` tools for measured visual observations and reusable artifa
 
 ## Everyday use
 
-- Gym: extract poses or track a visible movement over a short clip. Ground any rep count in a sequence of keypoints and actual timestamps; ask for a better view when joints are occluded. Pose coordinates alone do not establish injury risk or personalized medical advice.
+- Gym: extract poses or track a visible movement; when counting repetitions, use the workflow below. Pose coordinates alone do not establish injury risk or personalized medical advice.
 - Daily life: locate named belongings with YOLOE, produce cutouts, organize images, or summarize scene coverage. Use Hermes's existing vision for broader scene interpretation when YOLO outputs cannot answer it.
 - Business: produce object locations, footage observations, segmentation assets, and track tables. Counts of observations or track IDs are not a guaranteed inventory, occupancy, or unique-customer total.
 
-Read JSONL observations with Hermes's file/terminal tools when the compact first-frame preview cannot support the requested conclusion. The full timeline is in the data ZIP and the local observations artifact. Never infer an entire clip from its first-frame preview.
+Read the full JSONL timeline using Hermes's file/terminal tools whenever the compact preview cannot support the requested conclusion. The timeline is in the data ZIP and local observations artifact. Never infer an entire clip from its first-frame preview.
+
+## Counts over time
+
+Follow the same subject using track IDs or documented geometric association, checking continuity across occlusions and ID changes. Changing per-frame confidence or box-size rankings do not establish identity. Treat missing, low-confidence or implausibly jumping landmarks as gaps, not motion. Describe the method actually used: framewise pose detection is not identity tracking.
+
+Define the visible event before counting. Save a compact event table with subject, event-specific timestamps (for cycles: start, reversal and completion), status (complete, partial or uncertain), and supporting observations. Count distinct supported events from that table; deduplicate overlapping inspection windows. Preparation, repositioning, holds and recovery movements are not extra events unless they meet the definition. Derive timing summaries from the same table.
+
+Verify candidate events against the original footage. Inspect uncertain transitions with a crop and sampling interval that resolve the relevant movement; preserve original timestamps when extracting clips. Do not count across an unresolved gap. Distinguish a visible completed cycle from technique criteria the view cannot establish; an obscured endpoint is not proof of a partial movement. Describe equipment only as specifically as visible evidence supports.
+
+For corrections and follow-ups, reuse the saved observations and event table. Reconcile conflicting evidence before giving another exact count; report unresolved events explicitly or request a better view. Do not simply adopt a suggested count or announce a definitive correction while verification is still pending.
