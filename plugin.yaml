@@ -1,0 +1,29 @@
+name: hermes-yolo-vision
+version: "0.1.0"
+description: Local YOLO vision for images and videos, with structured results and annotated media.
+author: JaviChulvi
+license: AGPL-3.0-only
+requires_hermes: ">=0.23.0"
+python_runtime: external
+provides_tools:
+  - yolo_info
+  - yolo_predict
+  - yolo_track
+  - yolo_job
+provides_hooks:
+  - on_session_reset
+  - on_session_delete
+  - post_compaction
+config_schema:
+  python:
+    type: str
+    default: ""
+    label: Python executable in the plugin runtime (empty uses plugin .venv)
+  device:
+    type: str
+    default: cpu
+    label: Inference device
+  max_job_seconds:
+    type: int
+    default: 900
+    label: Maximum seconds per job
