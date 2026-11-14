@@ -4,7 +4,7 @@ Give your Hermes agent eyes with Ultralytics YOLO.
 
 `hermes-yolo-vision` adds four native tools and a skill to [Hermes Agent](https://github.com/NousResearch/hermes-agent). Ask about an uploaded image or video; Hermes can run a vision model, inspect structured observations, and return annotated media.
 
-**Status: development candidate; release criteria not met.** Real inference checks cover all seven tasks, YOLOE text prompts, and tracking. The completed conversation benchmark missed its comparative release target. Separate artifact-delivery correction tests pass; temporal-analysis improvements and live Telegram acceptance remain under validation. See the [measured results](evals/README.md).
+**Status: development candidate; release criteria not met.** Real inference checks cover all seven tasks, YOLOE text prompts, and tracking. The completed conversation benchmark missed its comparative release target. Separate artifact-delivery correction tests pass; temporal-analysis improvements and live Telegram acceptance remain under validation. See the [evaluation protocol and status](evals/README.md).
 
 ## What it can do
 
