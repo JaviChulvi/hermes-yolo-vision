@@ -1,46 +1,36 @@
-# YOLO Vision for Hermes
+<p align="center">
+  <img src="assets/hero.png" alt="Abstract engraved winged figure with detection outlines around a dog, bicycle and person" width="100%">
+</p>
 
-Give your Hermes agent eyes with Ultralytics YOLO.
+<h1 align="center">YOLO Vision for Hermes</h1>
 
-`hermes-yolo-vision` adds four native tools and a skill to [Hermes Agent](https://github.com/NousResearch/hermes-agent). Ask about an uploaded image or video; Hermes can run a vision model, inspect structured observations, and return annotated media.
+<p align="center"><strong>Give your Hermes agent eyes with Ultralytics YOLO.</strong></p>
 
-**Status: development candidate; release criteria not met.** Real inference checks cover all seven tasks, YOLOE text prompts, and tracking. The completed conversation benchmark missed its comparative release target. Separate artifact-delivery correction tests pass; temporal-analysis improvements and live Telegram acceptance remain under validation. See the [evaluation protocol and status](evals/README.md).
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#what-it-can-do">Capabilities</a> ·
+  <a href="#tools-and-outputs">Tools &amp; outputs</a> ·
+  <a href="#boundaries">Limitations</a> ·
+  <a href="evals/README.md">Evaluation</a>
+</p>
 
-## What it can do
+Send [Hermes Agent](https://github.com/NousResearch/hermes-agent) an image or video and ask a question. `hermes-yolo-vision` gives it four native tools and a skill to run YOLO, inspect structured observations, and return annotated media.
 
-| Task | Result | Default model |
-| --- | --- | --- |
-| Object detection | Classes, confidence, pixel boxes | `yolo26n.pt` |
-| Instance segmentation | Objects and mask polygons | `yolo26n-seg.pt` |
-| Semantic segmentation | Class areas and optional pixel mask | `yolo26n-sem-ade20k.pt` |
-| Depth estimation | Estimated depth summary and optional depth array | `yolo26n-depth.pt` |
-| Classification | Ranked image labels and scores | `yolo26n-cls.pt` |
-| Pose estimation | Person boxes and joint coordinates | `yolo26n-pose.pt` |
-| Oriented boxes | Rotated object corners | `yolo26n-obb.pt` |
+> **Development candidate.** Real inference checks cover all seven tasks, YOLOE text prompts, and tracking. The conversation benchmark missed its comparative release target; temporal analysis and live-channel behavior remain under validation. See the [evaluation protocol and status](evals/README.md).
 
-All seven tasks accept local images and videos. Tracking adds ByteTrack IDs to detection, segmentation, pose, or oriented boxes. YOLOE supports text-prompted detection/segmentation with `yoloe-26s-seg.pt`. Trusted local `.pt` weights can replace defaults.
+## A glimpse
 
-Accepted extensions: `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif`, and `.tiff` for images; `.mp4`, `.mov`, `.mkv`, `.avi`, `.webm`, and `.m4v` for videos.
+| You ask | Hermes can |
+| --- | --- |
+| “What objects are in this photo?” | Detect known classes, mark their locations, and return structured results. |
+| “Show my movement as a skeleton.” | Run pose estimation on the video and return joint observations and an annotated video. |
+| “Find the helmet.” | Use YOLOE text prompts for a requested category. |
 
-Video display rotations in multiples of 90 degrees are applied before analysis. Mirrored display metadata is rejected; export an upright video first.
-Annotated videos retain pixel aspect ratio; coordinates use decoded pixels after rotation.
+Models provide observations, not guaranteed answers: counts, tracking identities, and exercise analysis need interpretation and can be wrong.
 
-Examples of requests:
-
-- “Mark the people and vehicles in this photo and give me the counts.”
-- “Extract the people’s silhouettes and send the masks.”
-- “Track the person in this workout clip and export their joint coordinates over time.”
-- “Find the helmet in this image.”
-- “Give me a depth map and explain its limitations.”
-- “Using the previous results, list when each tracked person appeared.”
-
-Pose and tracking provide evidence for workout analysis and counting. Repetition counting, queue rules, product cutouts, and other applications require further analysis by the agent; they are not separate built-in plugin tools. See [the evaluation protocol](evals/README.md) for the use cases being tested.
-
-## Install
+## Quick start
 
 Requires Linux or macOS, Hermes **0.23.0 or later**, Git, and [uv](https://docs.astral.sh/uv/getting-started/installation/). The inference runtime uses Python 3.12 and is separate from Hermes’s Python environment. Windows is not supported in this release.
-
-Once the implementation is merged:
 
 ```bash
 hermes plugins install https://github.com/JaviChulvi/hermes-yolo-vision
@@ -68,6 +58,36 @@ plugins:
 ```
 
 Preserve other enabled plugins when editing this list. `allow_gateway_injection` enables background completion notifications in the originating chat. Without it, Hermes retrieves results by polling. Fast results return directly without an extra notification.
+
+## What it can do
+
+| Task | Result | Default model |
+| --- | --- | --- |
+| Object detection | Classes, confidence, pixel boxes | `yolo26n.pt` |
+| Instance segmentation | Objects and mask polygons | `yolo26n-seg.pt` |
+| Semantic segmentation | Class areas and optional pixel mask | `yolo26n-sem-ade20k.pt` |
+| Depth estimation | Estimated depth summary and optional depth array | `yolo26n-depth.pt` |
+| Classification | Ranked image labels and scores | `yolo26n-cls.pt` |
+| Pose estimation | Person boxes and joint coordinates | `yolo26n-pose.pt` |
+| Oriented boxes | Rotated object corners | `yolo26n-obb.pt` |
+
+All seven tasks accept local images and videos. Tracking adds ByteTrack IDs to detection, segmentation, pose, or oriented boxes. YOLOE supports text-prompted detection/segmentation with `yoloe-26s-seg.pt`. Trusted local `.pt` weights can replace defaults.
+
+Accepted extensions: `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif`, and `.tiff` for images; `.mp4`, `.mov`, `.mkv`, `.avi`, `.webm`, and `.m4v` for videos.
+
+Video display rotations in multiples of 90 degrees are applied before analysis. Mirrored display metadata is rejected; export an upright video first.
+Annotated videos retain pixel aspect ratio; coordinates use decoded pixels after rotation.
+
+### More things to ask
+
+- “Mark the people and vehicles in this photo and give me the counts.”
+- “Extract the people’s silhouettes and send the masks.”
+- “Track the person in this workout clip and export their joint coordinates over time.”
+- “Find the helmet in this image.”
+- “Give me a depth map and explain its limitations.”
+- “Using the previous results, list when each tracked person appeared.”
+
+Pose and tracking provide evidence for workout analysis and counting. Repetition counting, queue rules, product cutouts, and other applications require further analysis by the agent; they are not separate built-in plugin tools. See [the evaluation protocol](evals/README.md) for the use cases being tested.
 
 ## Tools and outputs
 
