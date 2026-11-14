@@ -1,0 +1,114 @@
+{
+  "sources": {
+    "coco8.zip": {
+      "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/coco8.zip",
+      "sha256": "54c67fe9ef88313e021ec0e92b73c200167bb0a86633e8df8658d832cca828c9"
+    },
+    "dota8.zip": {
+      "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/dota8.zip",
+      "sha256": "6f901955660fc5c613a0389f44240db359f07741effb48afc99d17155ee3e7ec"
+    },
+    "Pushups.demo.video.mp4": {
+      "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/Pushups.demo.video.mp4",
+      "sha256": "4c6c79de0bc1dcb231a36b555c4abbf029335c8186474786ee2d2300338004b7"
+    },
+    "Squats.demo.video.mp4": {
+      "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/Squats.demo.video.mp4",
+      "sha256": "d2946cf4855bdb8e4f0158828a98ab8455193b56d1fd2d6a637711790c6ae6c3"
+    },
+    "Benchpress.demo.video.mp4": {
+      "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/Benchpress.demo.video.mp4",
+      "sha256": "6e7d229e124e85b594f0620183f6756366c98445f9f2f0b3cdaa5d06dcc9827b"
+    }
+  },
+  "provenance_notes": "COCO8 and DOTA8 retain their dataset/image licenses; see upstream dataset documentation. Fitness media are upstream public demo assets; downloaded for testing, not redistributed. Bus is the installed Ultralytics sample. Corrupt file is authored here. Squat-frame is frame zero of the unmodified squat clip. Demo clips with burned-in annotations are excluded.",
+  "fixture_labels": {
+    "pushups": {
+      "complete_repetitions": 4,
+      "completion_seconds_approx": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "method": "Assistant visual inspection of the raw clip timeline before model runs; not human-adjudicated"
+    },
+    "squats": {
+      "complete_repetitions": 4,
+      "completion_seconds_approx": [
+        2.2,
+        4,
+        5.7,
+        7.3
+      ],
+      "method": "Assistant visual inspection of the raw clip timeline before model runs; not human-adjudicated"
+    }
+  },
+  "files": {
+    "coco25": {
+      "path": "coco8/images/train/000000000025.jpg",
+      "sha256": "f7ddff65077bd4e362a890ed13b1cd931fd38882d49bae9e7e53e369e4b4d028"
+    },
+    "coco30": {
+      "path": "coco8/images/train/000000000030.jpg",
+      "sha256": "52a12b6af76049a23192320610a316b6c1ea8e7d12e083f15c18e1690c506e66"
+    },
+    "coco34": {
+      "path": "coco8/images/train/000000000034.jpg",
+      "sha256": "8d5334f6c8d3e8b77d50726625eecc6896597f063d3801f1993ffcb9e6b05acb"
+    },
+    "coco36": {
+      "path": "coco8/images/val/000000000036.jpg",
+      "sha256": "4c28394898302bef227834d63498a0fc54e4295f11c590c8a8ebcba51347bc03"
+    },
+    "coco42": {
+      "path": "coco8/images/val/000000000042.jpg",
+      "sha256": "c87afb6dfe55db1cada52479ed939a231e030d64f5e3c3eaf7eb1544591f853a"
+    },
+    "coco49": {
+      "path": "coco8/images/val/000000000049.jpg",
+      "sha256": "86b46022d382f67b0934147fe515e1c3c3f5c04db45045516214b5e3092148e3"
+    },
+    "coco61": {
+      "path": "coco8/images/val/000000000061.jpg",
+      "sha256": "6460e4a7cc80e34815aba8910a23152a16a24a416fa598138bd9231cccd413e2"
+    },
+    "dota-a": {
+      "path": "dota8/images/train/P1161__1024__3296___1648.jpg",
+      "sha256": "55fb209a628afc9b96b6b10a0e903fc377bc879766eaeffa95e70432e22b8c17"
+    },
+    "dota-b": {
+      "path": "dota8/images/val/P1571__1024__2976___0.jpg",
+      "sha256": "106989c8abe610e280a5da60d57b631979eaa8e2ed799392771a0abb7daea094"
+    },
+    "pushups": {
+      "path": "Pushups.demo.video.mp4",
+      "sha256": "4c6c79de0bc1dcb231a36b555c4abbf029335c8186474786ee2d2300338004b7"
+    },
+    "squats": {
+      "path": "Squats.demo.video.mp4",
+      "sha256": "d2946cf4855bdb8e4f0158828a98ab8455193b56d1fd2d6a637711790c6ae6c3"
+    },
+    "benchpress": {
+      "path": "Benchpress.demo.video.mp4",
+      "sha256": "6e7d229e124e85b594f0620183f6756366c98445f9f2f0b3cdaa5d06dcc9827b"
+    },
+    "squat-frame": {
+      "path": "squat-frame.jpg",
+      "sha256": "85ac1454c2b60234faf9ea4c28810cf82b56cee534bab7dbd63f9f56e5366bae"
+    },
+    "bus": {
+      "path": "bus.jpg",
+      "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63"
+    },
+    "corrupt": {
+      "path": "corrupt.jpg",
+      "sha256": "d78266fd75749370de14437625b8f9a489edc7d23e69d6b5e009f5c31a178a66"
+    },
+    "dev-corrupt": {
+      "path": "dev-corrupt.jpg",
+      "sha256": "cf0a7d9249c2b09ed1991b6a6c1e35ae38df81c1e23464057e64e341abdedbc0"
+    }
+  },
+  "cases_sha256": "153bd774e30d423d1142a4b89a5c14db39dc964449cc45546a5c6d99f802a141"
+}
