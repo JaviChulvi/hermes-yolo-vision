@@ -95,6 +95,7 @@ Files live under `$HERMES_HOME/cache/generated/hermes-yolo-vision/<job-id>/`. Jo
 - Video totals count observations across frames, not unique people or products. Track IDs can fragment or switch. Sampling may miss events.
 - Depth is a model estimate, not a calibrated distance measurement. Pose coordinates alone do not establish safe exercise form or a medical assessment.
 - Annotated videos preserve presentation timing and display orientation, but omit audio. Unsampled frames are retained without annotations.
+- Inference and any analysis commands the agent runs share the host's memory; the plugin does not enforce a per-job memory limit. Large videos or concurrent workloads can exhaust memory on small hosts.
 - Model checkpoints execute through PyTorch: use only trusted local weights.
 - The file policy uses Hermes’s existing `agent.file_safety.get_read_block_error` guard, also used by bundled image plugins. Hermes currently flags this import as a private compatibility seam; version-specific integration checks are required.
 
